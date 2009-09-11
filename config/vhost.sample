@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:80
+
+    # This is the configuration for citadin
+    Listen 127.0.0.1:80
+
+    <VirtualHost 127.0.0.1:80>
+      ServerName citadin.localhost
+      DocumentRoot "/home/gaby/workspace/citadin/web"
+      DirectoryIndex index.php
+      <Directory "/home/gaby/workspace/citadin/web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf ""
+      <Directory "">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>
