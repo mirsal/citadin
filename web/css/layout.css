@@ -1,1 +1,31 @@
 @CHARSET "UTF-8";
+
+header
+{
+	height: 100px;
+	overflow: auto;
+}
+
+header figure.logo
+{
+	height: 62px;
+	width: 172px;
+	background: url('/images/logo_header.png') no-repeat;
+	float: left;
+	text-indent: -9999px;
+}
+
+header nav
+{
+	float: left;
+}
+
+header nav ul
+{
+	list-style: none;
+}
+
+header nav ul li
+{
+	display: inline;
+}

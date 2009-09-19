@@ -9,7 +9,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css, 960.css, layout.css]
+  stylesheets:    [main.css, layout.css]
 
   javascripts:    []
 
