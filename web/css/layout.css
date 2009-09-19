@@ -39,6 +39,21 @@ header nav ul
 header nav ul li
 {
 	display: inline;
+	background: url('/images/menu_background.jpg');
+	overflow: auto;
+}
+
+header nav ul li a:link
+{
+	color: #999;
+	text-decoration: none;
+	padding: 10px;
+}
+
+header nav ul li a:hover
+{
+	background: none;
+	color: #FFF;
 }
 
 div.separator
@@ -83,7 +98,8 @@ div.content
 div.sub_content
 {
 	width: 100%;
-	background: #FFF;
+	background: #FFF url('/images/shadow.png') top center no-repeat;
+	padding: 20px; 
 }
 
 footer
