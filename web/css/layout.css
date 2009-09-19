@@ -2,8 +2,19 @@
 
 header
 {
-	height: 100px;
+	height: 120px;
 	overflow: auto;
+	background: #FFF;
+	padding-top: 30px;
+}
+
+header div.wrapper
+{
+	width: 960px;
+	margin: 0 auto;
+	background: url('/images/shadow.png') top center no-repeat;
+	overflow: auto;
+	padding-top: 30px;
 }
 
 header figure.logo
@@ -28,4 +39,97 @@ header nav ul
 header nav ul li
 {
 	display: inline;
+}
+
+div.separator
+{
+	width: 100%;
+	background: #000;
+	height: 12px;
+}
+
+div.wrapper
+{
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+div.content_left,
+div.content,
+div.content_right
+{
+	min-height: 335px;
+	float: left;
+	width: 19px;
+}
+
+div.content_left
+{
+	background: url('/images/shadow_left.png') no-repeat;
+}
+
+div.content_right
+{
+	background: url('/images/shadow_right.png') no-repeat;	
+}
+
+div.content
+{
+	background: url('/images/background.jpg') no-repeat;
+	width: 901px;
+}
+
+div.sub_content
+{
+	width: 100%;
+	background: #FFF;
+}
+
+footer
+{
+	width: 960px;
+	margin: 0 auto;
+	background: url('/images/shadow.png') top center no-repeat;
+	padding-top: 30px;
+}
+
+footer figure.logo
+{
+	height: 62px;
+	width: 172px;
+	background: url('/images/logo_footer.png') center no-repeat;
+	text-indent: -9999px;
+	display: block;
+	margin: 0 auto 18px;
+}
+
+footer nav
+{
+	display: block;
+	width: 360px;
+	margin: 0 auto;
+}
+
+footer nav ul
+{
+	list-style: none;
+}
+
+footer nav ul li
+{
+	display: inline;
+}
+
+footer nav ul li a:link
+{
+	color: #888;
+	text-decoration: none;
+	font-size: small;
+}
+
+footer nav ul li a:hover
+{
+	background: none;
+	color: #000;	
 }
