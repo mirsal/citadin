@@ -14,27 +14,29 @@
 </head>
 
 <body>
-	<header>
-		<div class="wrapper">
-			<figure class="logo">Citad'in</figure>
-			<nav><ol>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Recherche manuelle</a></li>
-				<li><a href="#">Recherche assistée</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><form><input type="text" /></form></li>
-			</ol></nav>
-		</div>
-	</header>
-    <?php echo $sf_content ?>
-    <footer>
-    	<h2>Derniers ajouts</h2>
-    	<article>
-    		<figure class="thumbnail"></figure>
-    		<h3>T3</h3>
-    		<meter class="surface">75m2</meter>
-    		<address class="location">LYON 03</address>
-    	</article>
-    </footer>
+	<div class="container_12">
+		<header>
+			<div class="wrapper">
+				<figure class="logo">Citad'in</figure>
+				<nav><ol>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Recherche manuelle</a></li>
+					<li><a href="#">Recherche assistée</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><form><input type="text" /></form></li>
+				</ol></nav>
+			</div>
+		</header>
+	    <?php echo $sf_content ?>
+	    <footer>
+	    	<h2>Derniers ajouts</h2>
+	    	<article>
+	    		<figure class="thumbnail"></figure>
+	    		<h3>T3</h3>
+	    		<meter class="surface">75m2</meter>
+	    		<address class="location">LYON 03</address>
+	    	</article>
+	    </footer>
+    </div>
 </body>
 </html>
