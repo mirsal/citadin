@@ -4,7 +4,7 @@ header
 {
 	overflow: auto;
 	background: #FFF;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 header div.wrapper
@@ -179,9 +179,73 @@ div.content
 div.sub_content
 {
 	background: #FFF url('/images/shadow.png') top center no-repeat;
-	padding: 20px; 
+	padding: 20px 0; 
 }
 
+div.sub_content div.wrapper
+{
+	width: 940px;
+}
+
+div.sub_content h2
+{
+	font-family: serif;
+	font-size: 18px;
+	margin: 0 10px 20px 15px;
+	color: #555;
+	font-weight: normal;
+}
+
+div.sub_content article
+{
+	float: left;
+	margin: 5px;
+	width: 160px;
+	overflow: hidden;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 8px;
+}
+
+div.sub_content article:hover
+{
+	background: #CCC;	
+}
+
+div.sub_content article figure.thumbnail
+{
+	float: left;
+	width: 69px;
+	height: 69px;
+	background: url('/images/background_thumb.png') no-repeat;
+	margin-right: 10px; 
+}
+
+div.sub_content article h3
+{
+	margin: 0;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+div.sub_content article meter,
+div.sub_content article address
+{
+	font-size: 10px;	
+}
+
+div.sub_content article.rent
+{
+	color: #555;
+}
+
+div.sub_content article.sell
+{
+	color: #D00;	
+}
+
+/* FOOTER */
 footer
 {
 	width: 960px;

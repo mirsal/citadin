@@ -45,13 +45,38 @@
     </div>
     <div class="sub_content">
     	<div class="wrapper">
-	    	<h2>Derniers ajouts</h2>
-	    	<article>
+	    	<h2>Derniers Ajouts</h2>
+	    	<article class="rent">
 	    		<figure class="thumbnail"></figure>
 	    		<h3>T3</h3>
 	    		<meter class="surface">75m2</meter>
 	    		<address class="location">LYON 03</address>
 	    	</article>
+	    	<article class="sell">
+	    		<figure class="thumbnail"></figure>
+	    		<h3>T3</h3>
+	    		<meter class="surface">75m2</meter>
+	    		<address class="location">LYON 03</address>
+	    	</article>
+	    	<article class="rent">
+	    		<figure class="thumbnail"></figure>
+	    		<h3>T3</h3>
+	    		<meter class="surface">75m2</meter>
+	    		<address class="location">LYON 03</address>
+	    	</article>
+	    	<article class="sell">
+	    		<figure class="thumbnail"></figure>
+	    		<h3>T3</h3>
+	    		<meter class="surface">75m2</meter>
+	    		<address class="location">LYON 03</address>
+	    	</article>
+	    	<article class="rent">
+	    		<figure class="thumbnail"></figure>
+	    		<h3>T3</h3>
+	    		<meter class="surface">75m2</meter>
+	    		<address class="location">LYON 03</address>
+	    	</article>
+	    	
     	</div>
     </div>
     <footer>
