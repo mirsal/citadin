@@ -151,6 +151,7 @@ div.wrapper
 	overflow: auto;
 }
 
+/* Content */
 div.content_left,
 div.content,
 div.content_right
@@ -174,7 +175,25 @@ div.content
 {
 	background: url('/images/background.jpg') no-repeat;
 	width: 901px;
+	position: relative;
 }
+
+div.content div.search_form
+{
+	position: absolute;
+	left: 177px;
+	background: url('/images/searchform_background.png') no-repeat;
+	width: 377px;
+	height: 227px;	
+}
+
+div.content div.search_form h2
+{
+	color: #FFF;
+	margin: 8px 16px;	
+}
+
+/* Sub Content */
 
 div.sub_content
 {

@@ -19,8 +19,8 @@
 			<figure class="logo">Citad'in</figure>
 			<nav><ul>
 				<li class="left"></li>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Recherche manuelle</a></li>
+				<li><a href="<?php echo url_for('home/index')?>">Accueil</a></li>
+				<li><a href="<?php echo url_for('search/manual')?>">Recherche manuelle</a></li>
 				<li><a href="#">Recherche assistée</a></li>
 				<li><a href="#">Contact</a></li>
 				<li class="form">
@@ -76,7 +76,6 @@
 	    		<meter class="surface">75m2</meter>
 	    		<address class="location">LYON 03</address>
 	    	</article>
-	    	
     	</div>
     </div>
     <footer>
