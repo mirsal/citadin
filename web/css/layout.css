@@ -2,7 +2,6 @@
 
 header
 {
-	height: 120px;
 	overflow: auto;
 	background: #FFF;
 	padding-top: 30px;
@@ -19,41 +18,123 @@ header div.wrapper
 
 header figure.logo
 {
+	position: absolute;
 	height: 62px;
 	width: 172px;
 	background: url('/images/logo_header.png') no-repeat;
-	float: left;
 	text-indent: -9999px;
 }
 
 header nav
 {
-	float: left;
+	margin: 60px auto 0;
 }
 
 header nav ul
 {
 	list-style: none;
+	margin: 0 0 0 200px;
+	overflow: auto;
+	display: block;
 }
 
 header nav ul li
 {
-	display: inline;
-	background: url('/images/menu_background.jpg');
+	float: left;
 	overflow: auto;
+	height: 33px;
+	background: url('/images/menu_background.jpg');
 }
 
-header nav ul li a:link
+header nav ul li.left,
+header nav ul li.right
 {
+	width: 10px;
+	height: 33px;
+}
+
+header nav ul li.left
+{
+	background: url('/images/menu_background_left.jpg');
+}
+
+header nav ul li.right
+{
+	background: url('/images/menu_background_right.jpg');
+}
+
+header nav ul li a:link,
+header nav ul li a:visited
+{
+	display: block;
 	color: #999;
 	text-decoration: none;
-	padding: 10px;
+	margin: 10px 15px;
 }
 
 header nav ul li a:hover
 {
 	background: none;
 	color: #FFF;
+}
+
+header nav ul li.form
+{
+	width: 170px;	
+}
+
+header nav ul li.form form
+{
+	margin: 10px;
+	position: relative;	
+}
+
+header nav ul li.form form input.searchfield
+{
+	border: 0 none;
+	position: absolute;
+	left: 20px;
+	top: 0;
+	width: 120px;
+	height: 16px;
+	padding: 3px 0 0;
+	background: url('/images/searchfield_repeat.png') repeat-x;
+	font-size: 11px;
+}
+
+header nav ul li.form form span.left
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 19px;
+	background: url('/images/searchfield_leftcap.png') left top no-repeat;
+}
+
+header nav ul li.form form span.right
+{
+	display: block;
+	position: absolute;
+	left: 140px;
+	top: 0;
+	width: 20px;
+	height: 19px;
+	background: url('/images/searchfield_rightcap.png') left top no-repeat;
+}
+
+header nav ul li.form form div.reset
+{
+	background: url('/images/close.gif') no-repeat;
+	cursor: pointer;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	z-index: 1;
+	display: block;
+	width: 11px;
+	height: 11px;
 }
 
 div.separator
@@ -97,7 +178,6 @@ div.content
 
 div.sub_content
 {
-	width: 100%;
 	background: #FFF url('/images/shadow.png') top center no-repeat;
 	padding: 20px; 
 }
@@ -137,7 +217,8 @@ footer nav ul li
 	display: inline;
 }
 
-footer nav ul li a:link
+footer nav ul li a:link,
+footer nav ul li a:visited
 {
 	color: #888;
 	text-decoration: none;

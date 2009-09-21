@@ -18,11 +18,20 @@
 		<div class="wrapper">
 			<figure class="logo">Citad'in</figure>
 			<nav><ul>
+				<li class="left"></li>
 				<li><a href="#">Accueil</a></li>
 				<li><a href="#">Recherche manuelle</a></li>
 				<li><a href="#">Recherche assistée</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><form><input type="text" /></form></li>
+				<li class="form">
+					<form>
+						<span class="left"></span>
+						<input type="text" class="searchfield" size="10" />
+						<span class="right"></span>
+						<div class="reset"></div>
+					</form>
+				</li>
+				<li class="right"></li>
 			</ul></nav>
 		</div>
 	</header>
