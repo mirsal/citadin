@@ -1,3 +1,11 @@
+search_manual:
+  url: /search_manual
+  param: { module: search, action: manual }
+
+contact:
+  url: /contact
+  param: { module: contact, action: index }
+
 # default rules
 homepage:
   url:   /

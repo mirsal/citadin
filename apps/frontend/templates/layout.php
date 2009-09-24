@@ -19,10 +19,16 @@
 			<figure class="logo">Citad'in</figure>
 			<nav><ul>
 				<li class="left"></li>
-				<li><a href="<?php echo url_for('home/index')?>">Accueil</a></li>
-				<li><a href="<?php echo url_for('search/manual')?>">Recherche manuelle</a></li>
+				<li><a href="<?php echo url_for('homepage')?>">Accueil</a></li>
+				<li class="separator"></li>
+				<li><a href="<?php echo url_for('search_manual')?>">Recherche manuelle</a></li>
+				<li class="separator"></li>
 				<li><a href="#">Recherche assistée</a></li>
-				<li><a href="#">Contact</a></li>
+				<li class="separator"></li>
+				<li><a href="">Proposer un bien</a><li>
+				<li class="separator"></li>
+				<li><a href="<?php echo url_for('contact') ?>">Contact</a></li>
+				<li class="separator"></li>
 				<li class="form">
 					<form>
 						<span class="left"></span>

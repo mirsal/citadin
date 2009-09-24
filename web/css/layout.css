@@ -200,6 +200,85 @@ div.content div.search_form h2
 	margin: 8px 16px;	
 }
 
+div.content div.text
+{
+	width: 600px;
+	margin: 20px auto 0;
+	overflow: auto;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 8px;
+	background: #EEE;
+}
+
+/* Form */
+div.search_form
+{
+	
+}
+
+div.search_form form
+{
+	margin: 5px 12px;	
+}
+
+div.search_form form fieldset,
+div.search_form form input.submit
+{
+	margin: 5px 10px;
+}
+
+div.search_form form fieldset.left
+{
+	float: left;
+}
+
+div.search_form form fieldset.right
+{
+	float: right;
+}
+
+div.search_form form fieldset.topspace
+{
+	margin-top: 20px;	
+}
+
+div.search_form form fieldset label
+{
+	font-size: 11px;
+	color: #D00;	
+}
+
+div.search_form form fieldset h4
+{
+	font-size: 12px;
+	color: #FFF;	
+}
+
+div.search_form form fieldset input,
+div.search_form form fieldset select
+{
+	border: 1px #888 outset;
+	font-size: 11px;
+}
+
+div.search_form form input.submit
+{
+	border: 1px #D66 outset;
+	color: #FFF;
+	background: url('/images/submit_background.jpg');
+	height: 24px;
+	float: right;
+	margin-top: 15px; 
+}
+
+div.search_form form input.submit:hover
+{
+	border: 1px #D66 inset;
+	cursor: pointer;
+}
+
 /* Sub Content */
 
 div.sub_content
