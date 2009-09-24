@@ -213,11 +213,6 @@ div.content div.text
 }
 
 /* Form */
-div.search_form
-{
-	
-}
-
 div.search_form form
 {
 	margin: 5px 12px;	
@@ -270,7 +265,10 @@ div.search_form form input.submit
 	background: url('/images/submit_background.jpg');
 	height: 24px;
 	float: right;
-	margin-top: 15px; 
+	margin-top: 15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 div.search_form form input.submit:hover
