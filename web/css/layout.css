@@ -33,7 +33,7 @@ header nav
 header nav ul
 {
 	list-style: none;
-	margin: 0 0 0 200px;
+	margin: 0 0 0 176px;
 	overflow: auto;
 	display: block;
 }
@@ -188,7 +188,7 @@ div.content
 div.content div.search_form
 {
 	position: absolute;
-	left: 177px;
+	left: 153px;
 	background: url('/images/searchform_background.png') no-repeat;
 	width: 377px;
 	height: 227px;	
