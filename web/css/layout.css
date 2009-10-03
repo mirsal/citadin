@@ -261,7 +261,7 @@ div.search_form form fieldset select
 div.search_form form input.submit
 {
 	border: 1px #D66 outset;
-	color: #FFF;
+	color: #CCC;
 	background: url('/images/submit_background.jpg');
 	height: 24px;
 	float: right;
@@ -273,8 +273,13 @@ div.search_form form input.submit
 
 div.search_form form input.submit:hover
 {
-	border: 1px #D66 inset;
 	cursor: pointer;
+	color: #FFF;
+}
+
+div.search_form form input.submit:focus
+{
+	border: 1px #D66 inset;
 }
 
 /* Sub Content */
