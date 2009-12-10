@@ -42,48 +42,7 @@
 		</div>
 	</header>
 	<div class="separator"></div>
-	<div class="wrapper">
-		<div class="content_left"></div>
-		<div class="content">
-    		<?php echo $sf_content ?>
-    	</div>
-    	<div class="content_right"></div>
-    </div>
-    <div class="sub_content">
-    	<div class="wrapper">
-	    	<h2>Derniers Ajouts</h2>
-	    	<article class="rent">
-	    		<figure class="thumbnail"></figure>
-	    		<h3>T3</h3>
-	    		<meter class="surface">75m2</meter>
-	    		<address class="location">LYON 03</address>
-	    	</article>
-	    	<article class="sell">
-	    		<figure class="thumbnail"></figure>
-	    		<h3>T3</h3>
-	    		<meter class="surface">75m2</meter>
-	    		<address class="location">LYON 03</address>
-	    	</article>
-	    	<article class="rent">
-	    		<figure class="thumbnail"></figure>
-	    		<h3>T3</h3>
-	    		<meter class="surface">75m2</meter>
-	    		<address class="location">LYON 03</address>
-	    	</article>
-	    	<article class="sell">
-	    		<figure class="thumbnail"></figure>
-	    		<h3>T3</h3>
-	    		<meter class="surface">75m2</meter>
-	    		<address class="location">LYON 03</address>
-	    	</article>
-	    	<article class="rent">
-	    		<figure class="thumbnail"></figure>
-	    		<h3>T3</h3>
-	    		<meter class="surface">75m2</meter>
-	    		<address class="location">LYON 03</address>
-	    	</article>
-    	</div>
-    </div>
+		<?php echo $sf_content ?>
     <footer>
 	    <figure class="logo">Citad'in</figure>
 		<nav><ul>

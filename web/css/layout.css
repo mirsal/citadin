@@ -7,209 +7,148 @@ header
 	padding-top: 1px;
 }
 
-header div.wrapper
-{
-	width: 960px;
-	margin: 0 auto;
-	background: url('/images/shadow.png') top center no-repeat;
-	overflow: auto;
-	padding-top: 30px;
-}
-
-header figure.logo
-{
-	position: absolute;
-	height: 62px;
-	width: 172px;
-	background: url('/images/logo_header.png') no-repeat;
-	text-indent: -9999px;
-}
-
-header nav
-{
-	margin: 60px auto 0;
-}
-
-header nav ul
-{
-	list-style: none;
-	margin: 0 0 0 176px;
-	overflow: auto;
-	display: block;
-}
-
-header nav ul li
-{
-	float: left;
-	overflow: auto;
-	height: 33px;
-	background: url('/images/menu_background.jpg');
-}
-
-header nav ul li.separator
-{
-	width: 2px;
-	background: url('/images/menu_separator.jpg');
-}
-
-header nav ul li.left,
-header nav ul li.right
-{
-	width: 10px;
-	height: 33px;
-}
-
-header nav ul li.left
-{
-	background: url('/images/menu_background_left.jpg');
-}
-
-header nav ul li.right
-{
-	background: url('/images/menu_background_right.jpg');
-}
-
-header nav ul li a:link,
-header nav ul li a:visited
-{
-	display: block;
-	color: #DDD;
-	text-decoration: none;
-	padding: 10px 15px;
-	font-size: 12px;
-}
-
-header nav ul li a:hover
-{
-	background: none;
-	color: #FFF;
-}
-
-header nav ul li.form
-{
-	width: 170px;	
-}
-
-header nav ul li.form form
-{
-	margin: 10px;
-	position: relative;	
-}
-
-header nav ul li.form form input.searchfield
-{
-	border: 0 none;
-	position: absolute;
-	left: 20px;
-	top: 0;
-	width: 120px;
-	height: 16px;
-	padding: 3px 0 0;
-	background: url('/images/searchfield_repeat.png') repeat-x;
-	font-size: 11px;
-}
-
-header nav ul li.form form span.left
-{
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 20px;
-	height: 19px;
-	background: url('/images/searchfield_leftcap.png') left top no-repeat;
-}
-
-header nav ul li.form form span.right
-{
-	display: block;
-	position: absolute;
-	left: 140px;
-	top: 0;
-	width: 20px;
-	height: 19px;
-	background: url('/images/searchfield_rightcap.png') left top no-repeat;
-}
-
-header nav ul li.form form div.reset
-{
-	background: url('/images/close.gif') no-repeat;
-	cursor: pointer;
-	position: absolute;
-	right: 4px;
-	top: 4px;
-	z-index: 1;
-	display: block;
-	width: 11px;
-	height: 11px;
-}
+	header div.wrapper
+	{
+		width: 960px;
+		margin: 0 auto;
+		background: url('/images/shadow.png') top center no-repeat;
+		overflow: auto;
+		padding-top: 30px;
+	}
+	
+	header figure.logo
+	{
+		position: absolute;
+		height: 62px;
+		width: 172px;
+		background: url('/images/logo_header.png') no-repeat;
+		text-indent: -9999px;
+	}
+	
+	header nav
+	{
+		margin: 60px auto 0;
+	}
+	
+	header nav ul
+	{
+		list-style: none;
+		margin: 0 0 0 176px;
+		overflow: auto;
+		display: block;
+	}
+	
+	header nav li
+	{
+		float: left;
+		overflow: auto;
+		height: 33px;
+		background: url('/images/menu_background.jpg');
+	}
+	
+	header nav li.separator
+	{
+		width: 2px;
+		background: url('/images/menu_separator.jpg');
+	}
+	
+	header nav li.left,
+	header nav li.right
+	{
+		width: 10px;
+		height: 33px;
+	}
+	
+	header nav li.left
+	{
+		background: url('/images/menu_background_left.jpg');
+	}
+	
+	header nav li.right
+	{
+		background: url('/images/menu_background_right.jpg');
+	}
+	
+	header nav li a:link,
+	header nav li a:visited
+	{
+		display: block;
+		color: #DDD;
+		text-decoration: none;
+		padding: 10px 15px;
+		font-size: 12px;
+	}
+	
+	header nav li a:hover
+	{
+		background: none;
+		color: #FFF;
+	}
+	
+	header nav li.form
+	{
+		width: 170px;	
+	}
+	
+	header nav li.form form
+	{
+		margin: 10px;
+		position: relative;	
+	}
+	
+	header nav li.form form input.searchfield
+	{
+		border: 0 none;
+		position: absolute;
+		left: 20px;
+		top: 0;
+		width: 120px;
+		height: 16px;
+		padding: 3px 0 0;
+		background: url('/images/searchfield_repeat.png') repeat-x;
+		font-size: 11px;
+	}
+	
+	header nav li.form form span.left
+	{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 20px;
+		height: 19px;
+		background: url('/images/searchfield_leftcap.png') left top no-repeat;
+	}
+	
+	header nav li.form form span.right
+	{
+		display: block;
+		position: absolute;
+		left: 140px;
+		top: 0;
+		width: 20px;
+		height: 19px;
+		background: url('/images/searchfield_rightcap.png') left top no-repeat;
+	}
+	
+	header nav li.form form div.reset
+	{
+		background: url('/images/close.gif') no-repeat;
+		cursor: pointer;
+		position: absolute;
+		right: 4px;
+		top: 4px;
+		z-index: 1;
+		display: block;
+		width: 11px;
+		height: 11px;
+	}
 
 div.separator
 {
 	width: 100%;
 	background: #000;
 	height: 12px;
-}
-
-div.wrapper
-{
-	width: 960px;
-	margin: 0 auto;
-	overflow: auto;
-}
-
-/* Content */
-div.content_left,
-div.content,
-div.content_right
-{
-	min-height: 335px;
-	float: left;
-	width: 19px;
-}
-
-div.content_left
-{
-	background: url('/images/shadow_left.png') no-repeat;
-}
-
-div.content_right
-{
-	background: url('/images/shadow_right.png') no-repeat;	
-}
-
-div.content
-{
-	background: url('/images/background.jpg') no-repeat;
-	width: 901px;
-	position: relative;
-}
-
-div.content div.search_form
-{
-	position: absolute;
-	left: 153px;
-	background: url('/images/searchform_background.png') no-repeat;
-	width: 377px;
-	height: 227px;	
-}
-
-div.content div.search_form h2
-{
-	color: #FFF;
-	margin: 8px 16px;	
-}
-
-div.content div.text
-{
-	width: 600px;
-	margin: 20px auto 0;
-	overflow: auto;
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 8px;
-	background: #EEE;
 }
 
 /* Form */
@@ -280,77 +219,6 @@ div.search_form form input.submit:hover
 div.search_form form input.submit:focus
 {
 	border: 1px #D66 inset;
-}
-
-/* Sub Content */
-
-div.sub_content
-{
-	background: #FFF url('/images/shadow.png') top center no-repeat;
-	padding: 20px 0; 
-}
-
-div.sub_content div.wrapper
-{
-	width: 940px;
-}
-
-div.sub_content h2
-{
-	font-family: Times new roman, times, georgia, serif;
-	font-size: 22px;
-	margin: 0 10px 20px 15px;
-	color: #555;
-	font-weight: normal;
-}
-
-div.sub_content article
-{
-	float: left;
-	margin: 5px;
-	width: 160px;
-	overflow: hidden;
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 8px;
-}
-
-div.sub_content article:hover
-{
-	background: #EEE;	
-}
-
-div.sub_content article figure.thumbnail
-{
-	float: left;
-	width: 69px;
-	height: 69px;
-	background: url('/images/background_thumb.png') no-repeat;
-	margin-right: 10px; 
-}
-
-div.sub_content article h3
-{
-	margin: 0;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-div.sub_content article meter,
-div.sub_content article address
-{
-	font-size: 10px;	
-}
-
-div.sub_content article.rent
-{
-	color: #555;
-}
-
-div.sub_content article.sell
-{
-	color: #D00;	
 }
 
 /* FOOTER */

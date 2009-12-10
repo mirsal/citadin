@@ -1,5 +1,5 @@
 <div class="search_form">
-	<h2>Recherche Manuel</h2>
+	<h2>Recherche Manuelle</h2>
 	
 	<form>
 		<fieldset class="left">

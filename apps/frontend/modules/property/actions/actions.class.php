@@ -18,4 +18,8 @@ class propertyActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
   }
+  
+  public function executeShow(sfWebRequest $request)
+  {
+  }
 }

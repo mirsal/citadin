@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+div.property-details
+{
+	padding-bottom: 20px;
+	overflow: auto;
+	width: 960px;
+	margin: 0 auto;
+}
+
+	div.property-details div.left
+	{
+		width: 593px;
+		float: left;
+		background: url(../images/shadow_left.png) no-repeat;
+	}
+
+	div.property-details section.gallery
+	{
+		overflow: hidden;
+	}
+	
+		div.property-details section.gallery ul.thumbnails
+		{
+			width: 100px;
+			min-height: 300px;
+			float: left;
+			list-style: none;
+		}
+
+			div.property-details section.gallery ul.thumbnails figure
+			{
+				overflow: hidden;
+				width: 90px;
+				height: 69px;
+				background: #fff;
+				margin: 0 10px 10px;
+			}
+			
+			div.property-details section.gallery ul.thumbnails figure .mask
+			{
+				background: #666;
+				height: 65px;
+				width: 86px;
+				margin: 2px;
+				display: block;
+				overflow: hidden;
+			}
+			
+	
+		div.property-details section.gallery figure.pic
+		{
+			background: #fff;
+			box-shadow: 0 0 10px #666;
+			-moz-box-shadow: 0 0 10px #666;
+			-webkit-box-shadow: 0 0 10px #666;
+			height: 352px;
+			width: 440px;
+			margin: 14px;
+			float: left;
+		}
+		
+			div.property-details section.gallery figure.pic .mask
+			{
+				display: block;
+				overflow: hidden;
+				height: 312px;
+				margin: 2px;
+				background: #aaa;
+			}
+
+			div.property-details section.gallery figure.pic hgroup
+			{
+				background: #D00 url(../images/shadow.png) no-repeat center 3px;
+				display: block;
+				padding: 10px;
+				line-height: 100%;
+				color: #fff;
+				font-weight: bold;
+				font-size: 1.2em;
+			}
+		
+		div.property-details section.sub
+		{
+			margin: 20px 0 0 120px;
+		}
+	
+	div.property-details aside
+	{
+		background: #fff;
+		float: left;
+		width: 327px;
+		padding: 0 20px;
+	}
+	
+		div.property-details aside details.attributes ul.attribute-group li
+		{
+			list-style: none;
+			overflow: hidden;
+		}
+	
+			div.property-details aside details.attributes li strong.attribute-name
+			{
+				color: #666;
+				display: block;
+				float: left;
+				text-align: right;
+				width: 110px;
+				margin-right: 10px;
+				font-weight: normal;
+			}
+			
+			div.property-details aside details.attributes li strong.attribute-name:after
+			{
+				content: " : ";
+			}
+			
+			div.property-details aside details.attributes li span.attribute-value
+			{
+				display: block;
+				float: left;
+			}
+	
+		div.property-details aside details.description
+		{
+			background: url(../images/shadow.png) no-repeat;
+		}
