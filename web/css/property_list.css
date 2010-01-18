@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+div.property-filters-container {
+	width: 100%;
+}
+	div.property-filters-container > span.help {
+		display: block;
+		background: #AF0000;
+		color: #f0f0f0;
+		font-size: 11px;
+		text-align: center;
+		line-height: 24px;
+	}
+	
+	div.property-filters-container > ul.filters {
+		background: #DBDBDB url(../images/arrow.png) no-repeat bottom center;
+		width: 100%;
+		list-style: none;
+		padding-bottom: 42px;
+		margin: 0;
+		color: #555;
+	}
+	
+		div.property-filters-container > ul.filters > li {
+			width: 100%;
+			padding: 5px 0;
+			min-height: 22px;
+			line-height: 22px;
+			font-size: small;
+			border-bottom: #aaa 1px solid;
+		}
+		
+		div.property-filters-container > ul.filters > li:first-child {
+			background: url(/images/shadow.png) no-repeat scroll center top;
+		}
+		
+		div.property-filters-container > ul.filters > li a.add-filter {
+			font-size: 11px;
+			line-height: 22px;
+			color: #000;
+			padding-left: 16px;
+			background: url(../images/add.png) no-repeat left;
+		}
+		
+		div.property-filters-container > ul.filters > li > form.filter {
+			width: 960px;
+			padding-left: 200px;
+			margin: 0 auto;
+		}
+		
+			div.property-filters-container > ul.filters > li > form.filter span.name {
+				display: block;
+				float: left;
+				margin-right: 5px;
+				width: 200px;
+				text-align: right;
+			}
+
+div.property-list-container {
+	background: #fff url(/images/shadow.png) no-repeat scroll center top;
+}
+
+	div.property-list-container div.controls {
+		width: 960px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	div.property-list-container div.controls h2 {
+		margin: 0 10px;
+		padding: 30px 0 0;
+		color: #555;
+		font-size: large;
+		float: left;
+	}
+	
+		div.property-list-container div.controls h2 strong {
+			font-weight: normal;
+			color: #AF0000;
+		}
+	
+	div.property-list-container div.controls form.page-length {
+		float: right;
+		padding: 29px 0 0;
+		margin: 0 115px 0 0;
+	}
+	
+		div.property-list-container div.controls form.page-length label {
+			font-size: small;
+			color: #444;
+		}
+	
+	div.property-list-container > hr
+	{
+		border: none;
+		border-bottom: #aaa 1px solid;
+	}
+	
+	div.property-list-container > div.wrapper {
+		width: 960px;
+		margin: 0 auto;
+	}
+		
+		div.property-list-container > div.wrapper article {
+			width: 290px;
+			height: 115px;
+		}
+		
+		div.property-list-container > div.wrapper figure.thumbnail {
+			width: 150px;
+			height: 115px;
+			background: #ddd;
+		}

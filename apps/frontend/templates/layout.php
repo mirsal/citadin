@@ -21,13 +21,11 @@
 				<li class="left"></li>
 				<li><a href="<?php echo url_for('homepage')?>">Accueil</a></li>
 				<li class="separator"></li>
-				<li><a href="<?php echo url_for('search_manual')?>">Recherche manuelle</a></li>
-				<li class="separator"></li>
-				<li><a href="#">Recherche assistée</a></li>
+				<li><a href="<?php echo url_for('property_index')?>">Rechercher un bien</a></li>
 				<li class="separator"></li>
 				<li><a href="">Proposer un bien</a><li>
 				<li class="separator"></li>
-				<li><a href="<?php echo url_for('contact') ?>">Contact</a></li>
+				<li><a href="<?php echo url_for('contact') ?>">Nous contacter</a></li>
 				<li class="separator"></li>
 				<li class="form">
 					<form>
