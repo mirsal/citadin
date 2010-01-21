@@ -1,12 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
+<?php use_stylesheet('main') ?>
+<?php use_stylesheet('layout')?>
+<?php use_stylesheet('backend')?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
     <?php include_http_metas() ?>
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
-  </head>
-  <body>
-    <?php echo $sf_content ?>
-  </body>
+
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 7]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script><![endif]-->
+</head>
+
+<body>
+	<header>
+		<div class="wrapper">
+			<figure class="logo">Citad'in</figure>
+			<nav><ul>
+				<li class="left"></li>
+				<li><a href="<?php echo url_for('property')?>">Biens</a></li>
+				<li class="separator"></li>
+				<li><a href="<?php echo url_for('homepage')?>">Clients</a></li>
+				<li class="right"></li>
+			</ul></nav>
+		</div>
+	</header>
+	<div class="separator"></div>
+		<?php echo $sf_content ?>
+    <footer>
+	    <figure class="logo">Citad'in</figure>
+		<nav><ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Recherche manuelle</a></li>
+				<li><a href="#">Recherche assistée</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul></nav>
+    </footer>
+</body>
 </html>

@@ -106,8 +106,20 @@ div.property-list-container {
 			height: 115px;
 		}
 		
-		div.property-list-container > div.wrapper figure.thumbnail {
-			width: 150px;
-			height: 115px;
-			background: #ddd;
+		div.property-list-container > div.wrapper article h3 a
+		{
+			color: inherit;
+			text-decoration: none;
 		}
+		
+		div.property-list-container > div.wrapper article h3 a:hover
+		{
+			background: inherit;
+			text-shadow: inherit;
+		}
+		
+			div.property-list-container > div.wrapper article figure.thumbnail {
+				width: 150px;
+				height: 115px;
+				background: #ddd;
+			}
