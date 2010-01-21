@@ -27,7 +27,8 @@
 	<div class="controls">
     	<h2>
     		<span><?php echo 'Résultats de votre recherche' ?> - </span>
-    		<strong>34 réponses</strong>
+    		<?php $properties_count = count($properties) ?>
+    		<strong><?php echo sprintf($properties_count > 1 ? '%d réponses' : '%d réponse', $properties_count) ?></strong>
     	</h2>
     	<form class="page-length">
     		<label>Nombre de résultats par page</label>
@@ -38,77 +39,15 @@
     </div>
     <hr />
 	<div class="property-list wrapper">
+	<?php foreach ($properties as $property): ?>
 	    <article class="rental">
 	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
+    		<h3>
+    			<a href="<?php echo url_for('property_show', $property)?>"><?php echo $property->getName()?></a>
+    		</h3>
+	    	<meter class="surface"><?php echo sprintf('%dm²', $property->getSurface()) ?></meter>
+	    	<address class="location"><?php echo $property->getLocation() ?></address>
 	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
-	    <article class="sale">
-	    	<figure class="thumbnail"></figure>
-	    	<h3>T3</h3>
-	    	<meter class="surface">75m2</meter>
-	    	<address class="location">LYON 03</address>
-	    </article>
+	<?php endforeach; ?>
 	</div>
 </div>

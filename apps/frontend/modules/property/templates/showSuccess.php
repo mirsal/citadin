@@ -29,7 +29,11 @@
 				<div class="mask">
 					<img src="http://api.ning.com/files/I8T04TMPt7cL8Mqa31SFXF1ne2z1yu79fvPuH-54KglKjv7CQ5cwxe5ta2*PaVWgdIGGzSDGgs34WVcitQSeSRhOOsPVhLEw/RealEstate.jpg" />
 				</div>
-				<hgroup>350 000 € - T5 - Neuville 69</hgroup>
+				<hgroup>
+					<?php echo sprintf('%d €', $property->getPrice())?> - 
+					<?php echo $property->getName() ?> - 
+					<?php echo $property->getLocation() ?>
+				</hgroup>
 			</figure>
 		</section>
 		<section class="sub">
@@ -74,48 +78,30 @@
 			<ul class="attribute-group">
 				<li>
 					<strong class="attribute-name">Ville</strong>
-					<span class="attribute-value">Neuville sur saône - 69</span>
+					<span class="attribute-value"><?php echo $property->getLocation() ?></span>
 				</li>
 				<li>
 					<strong class="attribute-name">Nature du bien</strong>
-					<span class="attribute-value">Maison de village</span>
+					<span class="attribute-value"><?php echo $property->getName() ?></span>
 				</li>
 				<li>
 					<strong class="attribute-name">Orientation</strong>
-					<span class="attribute-value">S/E</span>
+					<span class="attribute-value"><?php echo $property->getOrientation()?></span>
 				</li>
 			</ul>
 			<ul class="attribute-group">
+			<?php foreach($property->getMetadataFields() as $k => $v): ?>
 				<li>
-					<strong class="attribute-name">Surface</strong>
-					<span class="attribute-value">158m²</span>
+					<strong class="attribute-name"><?php echo $k ?></strong>
+					<span class="attribute-value"><?php echo $v ?></span>
 				</li>
-				<li>
-					<strong class="attribute-name">Pièces</strong>
-					<span class="attribute-value">5</span>
-				</li>
-				<li>
-					<strong class="attribute-name">Alcôves</strong>
-					<span class="attribute-value">Non</span>
-				</li>
-				<li>
-					<strong class="attribute-name">Plafond</strong>
-					<span class="attribute-value">2m</span>
-				</li>
+			<?php endforeach;?>
 			</ul>
 		</details>
+	<?php if($description = $property->getDescription()): ?>
 		<details class="description">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Praesent et odio sit amet est elementum varius at et sapien. 
-				Pellentesque habitant morbi tristique senectus et netus et 
-				malesuada fames ac turpis egestas. Donec dapibus, 
-				eros cursus porttitor suscipit, nisl lorem ornare velit, 
-				vel fermentum dui libero et lorem. Sed a dictum metus. 
-				Proin at mauris pellentesque lectus dictum lobortis. 
-				Sed sem nibh, posuere a pulvinar quis, hendrerit non urna. 
-				Fusce tempor egestas enim, nec mattis dolor lacinia vel. 
-			</p>
+			<p><?php echo $description ?></p>
 		</details>
+	<?php endif;?>
 	</aside>
 </div>

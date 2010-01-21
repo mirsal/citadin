@@ -17,9 +17,11 @@ class propertyActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+  	$this->properties = PropertyPeer::doSelect(new Criteria());
   }
   
   public function executeShow(sfWebRequest $request)
   {
+  	$this->property = $this->getRoute()->getObject();
   }
 }

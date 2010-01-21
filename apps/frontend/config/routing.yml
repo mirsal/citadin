@@ -6,6 +6,12 @@ property_index:
   url: /property
   param: { module: property, action: index }
 
+property_show:
+  url: /property/:id
+  class: sfPropelRoute
+  options: { model: Property, type: object }
+  param: { module: property, action: show }
+
 # default rules
 homepage:
   url:   /
