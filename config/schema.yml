@@ -2,24 +2,20 @@ propel:
   property:
     _attributes:  { phpName: Property }
     id:
-    title:        { type: varchar(128), required: true }
-    address:      { type: varchar(255), required: true }
+    name:         { type: varchar(128), required: true }
+    location:     { type: varchar(255), required: true }
     type:         { type: varchar(64), required: true }
-    sell_price:   { type: float }
-    sell_estate_taxe: { type: float }
-    charge:       { type: float }
-    rent_price:   { type: float }
+    price:        { type: integer }
     description:  { type: longvarchar }
-    
-  property_metadata:
-    _attributes:  { phpName: PropertyMetadata }
-    
+    surface:      { type: integer }
+    orientation:  { type: varchar(128) }
+
   customer:
     _attributes:  { phpName: Customer }
     user_id:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
-    mail:         { type: varchar(128), required: true }
+    email:        { type: varchar(128), required: true }
     name:         { type: varchar(128), required: true }
     address:      { type: varchar(255), required: false }
     postal_code:  { type: varchar(16), required: false }
-    phone:        { type: varchar(16), required: true } 
-    mobile:       { type: varchar(16), required: true }
+    home_phone:   { type: varchar(16), required: false } 
+    mobile_phone: { type: varchar(16), required: false }
