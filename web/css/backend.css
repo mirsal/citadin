@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#sf_admin_container {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+	#sf_admin_container h1 {
+		background: #D00 url(../images/shadow.png) no-repeat center 3px;
+		display: block;
+		padding: 10px;
+		margin: 0;
+		line-height: 100%;
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	
+	#sf_admin_container .sf_admin_text input {
+		font-size: medium;
+		border: #aaa 1px solid;
+		padding: 5px;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
