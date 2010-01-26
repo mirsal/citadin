@@ -46,6 +46,14 @@ class PropertyFormFilter extends BasePropertyFormFilter
     );
   }
   
+  public function convertTypeValue($value)
+  {
+    if($value === 'TYPE_ANY')
+        return false;
+    
+    return array('text' => $value);
+  }
+  
   public function addRangeCriteria(Criteria $criteria, $field, $values)
   {
     $colname = $this->getColname($field);
