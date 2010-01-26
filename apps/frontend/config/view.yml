@@ -11,7 +11,7 @@ default:
 
   stylesheets:    [main.css, layout.css, common.css]
 
-  javascripts:    []
+  javascripts:    [jquery]
 
   has_layout:     on
   layout:         layout
