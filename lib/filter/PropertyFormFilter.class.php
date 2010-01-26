@@ -17,7 +17,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
     $this->widgetSchema['description'] = new sfWidgetFormTextarea();
     
     $this->widgetSchema['type'] = new sfWidgetFormSelectRadio(array(
-  		'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Both'))
+  		'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Any'))
   	));
   	
   	$orientations = PropertyPeer::getAllValuesForColumn(PropertyPeer::ORIENTATION);
@@ -47,7 +47,8 @@ class PropertyFormFilter extends BasePropertyFormFilter
   public function getFields()
   {
     return array_merge(parent::getFields(), array(
-        'price' => 'Range'
+        'price'   => 'Range',
+        'surface' => 'Range'
     ));
   }
   
@@ -70,7 +71,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
   public function addRangeCriteria(Criteria $criteria, $field, $values)
   {
     $colname = $this->getColname($field);
-
+    
     $criterion = null;
     if (!is_null($values['from']) && !is_null($values['to']))
     {
