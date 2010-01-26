@@ -25,6 +25,8 @@
 				<li><a href="<?php echo url_for('property')?>">Biens</a></li>
 				<li class="separator"></li>
 				<li><a href="<?php echo url_for('homepage')?>">Clients</a></li>
+                <li class="separator"></li>
+				<li><a href="<?php echo url_for('homepage')?>">Paramètres avancés</a></li>
 				<li class="right"></li>
 			</ul></nav>
 		</div>
