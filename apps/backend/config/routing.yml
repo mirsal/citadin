@@ -10,7 +10,7 @@ property:
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: property, action: index }
 
 default_index:
   url:   /:module
