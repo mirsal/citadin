@@ -84,10 +84,6 @@
 					<strong class="attribute-name">Nature du bien</strong>
 					<span class="attribute-value"><?php echo $property->getName() ?></span>
 				</li>
-				<li>
-					<strong class="attribute-name">Orientation</strong>
-					<span class="attribute-value"><?php echo $property->getOrientation()?></span>
-				</li>
 			</ul>
 			<ul class="attribute-group">
 			<?php foreach($property->getMetadataFields() as $k => $v): ?>
