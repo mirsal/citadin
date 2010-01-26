@@ -39,6 +39,9 @@ class PropertyFormFilter extends BasePropertyFormFilter
   	
   	$this->widgetSchema['price'] = new iiwiWidgetFormFilterRange();
     $this->widgetSchema['surface'] = new iiwiWidgetFormFilterRange();
+    
+    $this->validatorSchema['price'] = new iiwiValidatorRange();
+    $this->validatorSchema['surface'] = new iiwiValidatorRange();
   }
   
   public function getFields()
@@ -46,14 +49,6 @@ class PropertyFormFilter extends BasePropertyFormFilter
     return array_merge(parent::getFields(), array(
         'price' => 'Range'
     ));
-  }
-  
-  public function convertPriceValue($value)
-  {
-    return array(
-        'from' => "" === $value['from'] ? null : (int) $value['from'],
-        'to'   => "" === $value['to'] ? null : (int) $value['to']
-    );
   }
   
   public function convertTypeValue($value)
