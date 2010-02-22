@@ -42,9 +42,11 @@
 	<?php foreach ($properties as $property): ?>
 	    <article class="rental">
             <figure class="thumbnail">
-                <div class="mask">
-                    <img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
-                </div>            
+                <a href="<?php echo url_for('property_show', $property)?>">
+                    <div class="mask">
+                        <img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
+                    </div>
+                </a>
             </figure>
     		<h3>
     			<a href="<?php echo url_for('property_show', $property)?>"><?php echo $property->getName()?></a>
