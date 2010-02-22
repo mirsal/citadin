@@ -41,7 +41,11 @@
 	<div class="property-list wrapper">
 	<?php foreach ($properties as $property): ?>
 	    <article class="rental">
-	    	<figure class="thumbnail"></figure>
+            <figure class="thumbnail">
+                <div class="mask">
+                    <img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
+                </div>            
+            </figure>
     		<h3>
     			<a href="<?php echo url_for('property_show', $property)?>"><?php echo $property->getName()?></a>
     		</h3>
