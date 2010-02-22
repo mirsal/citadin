@@ -27,6 +27,11 @@ class PropertyForm extends BasePropertyForm
 
   	$this->widgetSchema['new_file'] = new sfWidgetFormInputFile();
   	$this->validatorSchema['new_file'] = new sfValidatorFile(array('required' => false));
+  
+    $this->widgetSchema->setLabels(array(
+        'files' => 'Photos',
+        'new_file' => 'Upload a new photo'
+    ));
   }
   
   public function save($con = null)
