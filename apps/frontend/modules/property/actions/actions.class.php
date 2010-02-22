@@ -22,6 +22,16 @@ class propertyActions extends sfActions
   
   public function executeShow(sfWebRequest $request)
   {
-  	$this->property = $this->getRoute()->getObject();
+  	$property = $this->getRoute()->getObject();
+  	if($request->hasParameter('image') and
+  	    $img = FileAttachmentPeer::retrieveByPk($request->getParameter('image')) and
+  	    $img->getPropertyId() === $property->getId())
+  	    $this->image = $img;
+
+  	if($request->isXmlHttpRequest() and isset($this->image))
+  	    return $this->renderText($this->generateUrl('render_attachment',
+  	        array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_BIG)));
+
+    $this->property = $property;	 
   }
 }

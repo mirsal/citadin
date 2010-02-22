@@ -3,19 +3,21 @@
 	<div class="left">
 		<section class="gallery">
 			<ul class="thumbnails">
-			<?php foreach($property->getFileAttachments() as $image): ?>
+			<?php foreach($property->getFileAttachments() as $img): ?>
 				<li>
+				    <a href="<?php echo url_for('property_show', array('sf_subject' => $property, 'image' => $img->getId())) ?>">
 					<figure class="thumbnail">
 						<div class="mask">
-							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
 						</div>
 					</figure>
+					</a>
 				</li>
 			<?php endforeach; ?>
 			</ul>
 			<figure class="pic">
 				<div class="mask">
-					<img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
+					<img src="<?php echo url_for('render_attachment', array('sf_subject' => isset($image) ? $image : $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
 				</div>
 				<hgroup>
 					<?php echo sprintf('%d €', $property->getPrice())?> - 
