@@ -13,7 +13,9 @@ propel:
   file_attachment:
     _attributes: { phpName: FileAttachment }
     id:
-    property_id:
+    property_id: { type: integer, foreignTable: property, foreignReference: id, onDelete: cascade, index: true }
+    file_attachment_id: { type: integer, foreignTable: file_attachment, foreignReference: id, onDelete: cascade, index: true }
+    relative_size: { type: varchar(16), index: true }
     content_type: varchar(32)
     size: integer
     data: blob

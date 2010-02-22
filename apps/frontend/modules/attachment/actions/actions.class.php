@@ -21,7 +21,7 @@ class attachmentActions extends sfActions
     
     if($request->hasParameter('thumbnail'))
         $attachment = $attachment->getThumbnail($request->getParameter('thumbnail'));
-    
+
     $this->forward404If(!$attachment or $attachment->getData() === null);
     $this->getResponse()->clearHttpHeaders();
     $this->getResponse()->setHttpHeader('Content-Type', $attachment->getContentType());

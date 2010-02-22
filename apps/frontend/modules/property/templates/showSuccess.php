@@ -3,31 +3,19 @@
 	<div class="left">
 		<section class="gallery">
 			<ul class="thumbnails">
+			<?php foreach($property->getFileAttachments() as $image): ?>
 				<li>
 					<figure class="thumbnail">
 						<div class="mask">
-							<img src="http://www.moneywalks.com/wp-content/uploads/2007/06/real-estate-2.jpg" />
+							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
 						</div>
 					</figure>
 				</li>
-				<li>
-					<figure class="thumbnail">
-						<div class="mask">
-							<img src="http://www.shubhkriti.net/images/palm-beach-real-estate.jpg" />
-						</div>
-					</figure>
-				</li>
-				<li>
-					<figure class="thumbnail">
-						<div class="mask">
-							<img src="http://www.adamcoupe.com/resource/dynamic/image/portfolio_entry/358/lara_croft_interior_1/128x128/lara_croft_interior_1.jpg" />
-						</div>
-					</figure>
-				</li>
+			<?php endforeach; ?>
 			</ul>
 			<figure class="pic">
 				<div class="mask">
-					<img src="http://api.ning.com/files/I8T04TMPt7cL8Mqa31SFXF1ne2z1yu79fvPuH-54KglKjv7CQ5cwxe5ta2*PaVWgdIGGzSDGgs34WVcitQSeSRhOOsPVhLEw/RealEstate.jpg" />
+					<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
 				</div>
 				<hgroup>
 					<?php echo sprintf('%d €', $property->getPrice())?> - 

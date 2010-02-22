@@ -42,7 +42,9 @@ class PropertyForm extends BasePropertyForm
     $attachment->setSize($file->getSize());
     $attachment->setData(file_get_contents($file->getTempName()));
     $attachment->save();
-    
+
+    $attachment->createThumbnails();
+
     return $ret;
   }
 }
