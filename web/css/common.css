@@ -58,7 +58,18 @@ div.property-list
 			font-weight: bold;
 			font-size: 16px;
 		}
-		
+
+            div.property-list article h3 a
+            {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            div.property-list article h3 a:hover
+            {
+                color: #f0f0f0;
+            }
+
 		div.property-list article meter,
 		div.property-list article address
 		{

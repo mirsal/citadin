@@ -32,11 +32,14 @@
                 <?php foreach(PropertyPeer::doSelect(new Criteria()) as $p): ?>
 		    	<article class="rental">
                     <figure class="thumbnail">
-                        <div class="mask">
-                            <img src="<?php echo url_for('render_attachment', array('sf_subject' => $p->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
-                        </div>
+                        <a href="<?php echo url_for('property_show', $p) ?>">
+                            <div class="mask">
+                                <img src="<?php echo url_for('render_attachment', array('sf_subject' => $p->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+                            </div>
+                        </a>
                     </figure>
-                    <h3><?php echo $p->getName() ?></h3>
+                    <h3><a href="<?php echo url_for('property_show', $p) ?>"><?php echo $p->getName() ?></a>
+</h3>
                     <meter class="surface"><?php echo sprintf('%dm²', $p->getSurface()) ?></meter>
                     <address class="location"><?php echo $p->getLocation() ?></address>
                 </article>
