@@ -44,7 +44,7 @@ header
 	header nav li
 	{
 		float: left;
-		overflow: auto;
+		overflow: hidden;
 		height: 33px;
 		background: url('/images/menu_background.jpg');
 	}
