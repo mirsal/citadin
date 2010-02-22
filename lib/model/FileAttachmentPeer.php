@@ -8,8 +8,8 @@ class FileAttachmentPeer extends BaseFileAttachmentPeer
     const SIZE_ORIGINAL = 'ORIG';
 
     static $thumbnailSizes = array(
-        self::SIZE_SMALL => array(69, 69),
-        self::SIZE_MEDIUM => array(86, 65),
+        self::SIZE_SMALL => array(86, 69),
+        self::SIZE_MEDIUM => array(150, 115),
         self::SIZE_BIG => array(440, 312)
     );
 

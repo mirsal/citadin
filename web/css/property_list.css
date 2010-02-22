@@ -123,3 +123,9 @@ div.property-list-container {
 				height: 115px;
 				background: #ddd;
 			}
+			
+			    div.property-list-container > div.wrapper article figure.thumbnail .mask {
+			    	width: 146px;
+			    	height: 111px;
+			    	overflow: hidden;
+			    }

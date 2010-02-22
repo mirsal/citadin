@@ -7,7 +7,7 @@
 				<li>
 					<figure class="thumbnail">
 						<div class="mask">
-							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
+							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
 						</div>
 					</figure>
 				</li>
