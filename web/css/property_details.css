@@ -23,9 +23,10 @@ div.property-details
 		div.property-details section.gallery ul.thumbnails
 		{
 			width: 100px;
-			min-height: 300px;
+			height: 300px;
 			float: left;
 			list-style: none;
+			overflow: hidden;
 		}
 
 			div.property-details section.gallery ul.thumbnails figure
