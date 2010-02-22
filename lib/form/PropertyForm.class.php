@@ -32,6 +32,10 @@ class PropertyForm extends BasePropertyForm
         'files' => 'Photos',
         'new_file' => 'Upload a new photo'
     ));
+    
+    $this->widgetSchema->setHelps(array(
+        'files' => 'Click on a photo to remove it'
+    ));
   }
   
   public function save($con = null)

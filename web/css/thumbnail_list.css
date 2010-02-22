@@ -1,7 +1,7 @@
 ul.thumbnail_list {
     overflow: hidden;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     list-style: none;
 }
 
@@ -9,6 +9,7 @@ ul.thumbnail_list {
         width: 150px;
         height: 115px;
         overflow: hidden;
-        margin: 10px;
+        margin: 0 20px 20px 0;
         float: left;
     }
+
