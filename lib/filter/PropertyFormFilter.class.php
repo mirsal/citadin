@@ -14,7 +14,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
   {
     $this->widgetSchema['name'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     $this->widgetSchema['location'] = new sfWidgetFormFilterInput(array('with_empty' => false));
-    $this->widgetSchema['description'] = new sfWidgetFormTextarea();
+    $this->widgetSchema['description'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     
     $this->widgetSchema['type'] = new sfWidgetFormSelectRadio(array(
   		'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Any'))
