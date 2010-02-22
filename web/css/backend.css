@@ -15,6 +15,13 @@
 		color: #fff;
 		font-weight: bold;
 		font-size: 1.2em;
+		
+		border-radius: 5px;
+		-moz-border-radius: 0 0 5px 5px;
+		-webkit-border-radius: 0 0 5px 5px;
+		-moz-box-shadow: 0 0 10px #000;
+		box-shadow: 0 0 10px #000;
+		
 	}
 	
 	#sf_admin_container .sf_admin_text input {
