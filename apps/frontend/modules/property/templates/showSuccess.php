@@ -28,11 +28,10 @@
 		   	<div class="property-list wrapper">
 		    	<h2>Biens similaires</h2>
                 <?php foreach(PropertyPeer::doSelect(new Criteria()) as $p): ?>
-                <?php $image = $p->getRandomFileAttachment() ?>
 		    	<article class="rental">
                     <figure class="thumbnail">
                         <div class="mask">
-                            <img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+                            <img src="<?php echo url_for('render_attachment', array('sf_subject' => $p->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
                         </div>
                     </figure>
                     <h3><?php echo $p->getName() ?></h3>
