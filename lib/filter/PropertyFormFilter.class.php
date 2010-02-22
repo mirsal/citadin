@@ -24,7 +24,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
   	$this->widgetSchema['orientation'] = new sfWidgetFormSelect(array(
   		'choices' => array_merge(
   		    array('ORIENTATION_ANY' => 'Any'),
-  		    array_combine($orientations, $orientations))
+  		    $orientations ? array_combine($orientations, $orientations) : array())
   	));
   	
   	$this->getWidgetSchema()->setDefault('type', 'TYPE_ANY');
