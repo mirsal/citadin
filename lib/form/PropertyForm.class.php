@@ -22,7 +22,9 @@ class PropertyForm extends BasePropertyForm
   			'choices' => array_keys(PropertyPeer::getTypes())
   		))
   	));
-  	
+
+  	$this->widgetSchema['files'] = new iiwiWidgetFormThumbnailList(array('images' => $this->getObject()->getFileAttachments()));
+
   	$this->widgetSchema['new_file'] = new sfWidgetFormInputFile();
   	$this->validatorSchema['new_file'] = new sfValidatorFile(array('required' => false));
   }
