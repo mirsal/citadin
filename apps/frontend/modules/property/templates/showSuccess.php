@@ -7,7 +7,7 @@
 				<li>
 					<figure class="thumbnail">
 						<div class="mask">
-							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
 						</div>
 					</figure>
 				</li>
@@ -15,7 +15,7 @@
 			</ul>
 			<figure class="pic">
 				<div class="mask">
-					<img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
+					<img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
 				</div>
 				<hgroup>
 					<?php echo sprintf('%d €', $property->getPrice())?> - 
@@ -27,36 +27,19 @@
 		<section class="sub">
 		   	<div class="property-list wrapper">
 		    	<h2>Biens similaires</h2>
+                <?php foreach(PropertyPeer::doSelect(new Criteria()) as $p): ?>
+                <?php $image = $p->getRandomFileAttachment() ?>
 		    	<article class="rental">
-		    		<figure class="thumbnail"></figure>
-		    		<h3>T3</h3>
-		    		<meter class="surface">75m2</meter>
-		    		<address class="location">LYON 03</address>
-		    	</article>
-		    	<article class="sale">
-		    		<figure class="thumbnail"></figure>
-		    		<h3>T3</h3>
-		    		<meter class="surface">75m2</meter>
-		    		<address class="location">LYON 03</address>
-		    	</article>
-		    	<article class="rental">
-		    		<figure class="thumbnail"></figure>
-		    		<h3>T3</h3>
-		    		<meter class="surface">75m2</meter>
-		    		<address class="location">LYON 03</address>
-		    	</article>
-		    	<article class="sale">
-		    		<figure class="thumbnail"></figure>
-		    		<h3>T3</h3>
-		    		<meter class="surface">75m2</meter>
-		    		<address class="location">LYON 03</address>
-		    	</article>
-		    	<article class="rental">
-		    		<figure class="thumbnail"></figure>
-		    		<h3>T3</h3>
-		    		<meter class="surface">75m2</meter>
-		    		<address class="location">LYON 03</address>
-		    	</article>
+                    <figure class="thumbnail">
+                        <div class="mask">
+                            <img src="<?php echo url_for('render_attachment', array('sf_subject' => $image, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+                        </div>
+                    </figure>
+                    <h3><?php echo $p->getName() ?></h3>
+                    <meter class="surface"><?php echo sprintf('%dm²', $p->getSurface()) ?></meter>
+                    <address class="location"><?php echo $p->getLocation() ?></address>
+                </article>
+            <?php endforeach; ?>
 	    	</div>
 	    	<a class="more">Plus de biens similaires</a>
 		</section>
@@ -79,10 +62,10 @@
 					<strong class="attribute-name"><?php echo $k ?></strong>
 					<span class="attribute-value"><?php echo $v ?></span>
 				</li>
-			<?php endforeach;?>
+            <?php endforeach;?>
 			</ul>
 		</details>
-	<?php if($description = $property->getDescription()): ?>
+    <?php if($description = $property->getDescription()): ?>
 		<details class="description">
 			<p><?php echo $description ?></p>
 		</details>

@@ -44,6 +44,14 @@ div.property-list
 			margin-right: 10px; 
 		}
 		
+		    div.property-list article figure.thumbnail .mask
+		    {
+		        overflow: hidden;
+		        width: 65px;
+		        height: 65px;
+		        margin: 2px;
+            }
+
 		div.property-list article h3
 		{
 			margin: 0;

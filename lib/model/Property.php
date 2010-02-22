@@ -26,4 +26,13 @@ class Property extends BaseProperty
 			array_flip($this->getSpecialFields($keyType))
 		);
 	}
+
+	public function getRandomFileAttachment()
+	{
+	    $c = new Criteria();
+	    $c->addDescendingOrderbyColumn('rand()');
+	    $c->setLimit(1);
+	    $ret = $this->getFileAttachments($c);
+	    return isset($ret[0]) ? $ret[0] : null;
+	}
 }
