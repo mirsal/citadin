@@ -5,13 +5,13 @@
 			<ul class="thumbnails">
 			<?php foreach($property->getFileAttachments() as $img): ?>
 				<li>
-				    <a href="<?php echo url_for('property_show', array('sf_subject' => $property, 'image' => $img->getId())) ?>">
-					<figure class="thumbnail">
-						<div class="mask">
-							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
-						</div>
+    				<figure class="thumbnail">
+				        <a href="<?php echo url_for('property_show', array('sf_subject' => $property, 'image' => $img->getId())) ?>">
+    						<div class="mask">
+    							<img src="<?php echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+    						</div>
+    					</a>
 					</figure>
-					</a>
 				</li>
 			<?php endforeach; ?>
 			</ul>
