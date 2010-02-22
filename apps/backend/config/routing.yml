@@ -1,3 +1,9 @@
+render_attachment:
+  url: /attachments/:id.png
+  class: sfPropelRoute
+  options: { model: FileAttachment, type: object }
+  param: { module: attachment, action: render }
+
 property:
   class: sfPropelRouteCollection
   options:

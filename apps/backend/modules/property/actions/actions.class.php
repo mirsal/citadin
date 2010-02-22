@@ -13,4 +13,9 @@ require_once dirname(__FILE__).'/../lib/propertyGeneratorHelper.class.php';
  */
 class propertyActions extends autoPropertyActions
 {
+    public function executeShowAttachments(sfWebRequest $request)
+    {
+        $this->property = $this->getRoute()->getObject();
+    }
+    
 }

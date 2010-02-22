@@ -22,5 +22,27 @@ class PropertyForm extends BasePropertyForm
   			'choices' => array_keys(PropertyPeer::getTypes())
   		))
   	));
+  	
+  	$this->widgetSchema['new_file'] = new sfWidgetFormInputFile();
+  	$this->validatorSchema['new_file'] = new sfValidatorFile(array('required' => false));
+  }
+  
+  public function save($con = null)
+  {
+    $ret = parent::save();
+
+    $file = $this->getValue('new_file');
+
+    if (!($file instanceof sfValidatedFile))
+        return $ret;
+
+    $attachment = new FileAttachment();
+    $attachment->setProperty($ret);
+    $attachment->setContentType($file->getType());
+    $attachment->setSize($file->getSize());
+    $attachment->setData(file_get_contents($file->getTempName()));
+    $attachment->save();
+    
+    return $ret;
   }
 }

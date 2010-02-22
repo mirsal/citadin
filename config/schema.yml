@@ -10,6 +10,14 @@ propel:
     surface:      { type: integer }
     orientation:  { type: varchar(128) }
 
+  file_attachment:
+    _attributes: { phpName: FileAttachment }
+    id:
+    property_id:
+    content_type: varchar(32)
+    size: integer
+    data: blob
+
   customer:
     _attributes:  { phpName: Customer }
     user_id:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
