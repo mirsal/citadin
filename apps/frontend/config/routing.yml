@@ -12,6 +12,10 @@ property_index:
   url: /property
   param: { module: property, action: index }
 
+add_property_filter:
+  url: /property/add_filter
+  param: { module: property, action: addFilter }
+
 update_property_page_length:
   url: /property/update_page_length
   param: { module: property, action: updatePageLength }

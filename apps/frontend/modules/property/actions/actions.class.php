@@ -43,7 +43,11 @@ class propertyActions extends sfActions
     if($request->hasParameter('page'))
         $pager->setPage($request->getParameter('page'));
 
-    $visible_fields = array('name', 'location', 'surface');
+    $visible_fields = array_merge(
+        $this->getUser()->getAttribute('visible_filters'),
+        array('name', 'location', 'surface')
+    );
+
     foreach($filters as $field_name => $field)
     {
         if(!$filters->getValue($field_name) or $field->hasError())
@@ -73,6 +77,24 @@ class propertyActions extends sfActions
     }
 
     $this->forward404();
+  }
+
+  public function executeAddFilter(sfWebRequest $request)
+  {
+    $form = new AddPropertyFilterForm();
+    if($request->hasParameter($form->getName()))
+    {
+        $form->bind($request->getParameter($form->getName()));
+        if($form->isValid())
+        {
+            $this->getUser()->setAttribute('visible_filters', array_merge(
+                array($form->getValue('filter')),
+                $this->getUser()->getAttribute('visible_filters', array())
+            ));
+
+            $this->redirect($this->generateUrl('property_index'));
+        }
+    }
   }
 
   public function executeShow(sfWebRequest $request)

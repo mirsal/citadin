@@ -10,18 +10,32 @@
                 </fieldset>
 		    </li>
 		<?php endforeach; ?>
+        <?php if(!$sf_request->getParameter('show_add_filter_form')): ?>
             <li>
                 <fieldset class="filter">
                     <span class="name">&nbsp;</span>
-                    <a class="add-filter" href="#">Ajouter un filtre</a>
+                    <a class="add-filter" href="<?php echo url_for('property_index', array('show_add_filter_form' => true)) ?>">Ajouter un filtre</a>
                 <?php if(count($sf_user->getAttribute('visible_filters', array()))): ?>
                     <input type="submit" value="Rechercher"/>
                 <?php endif; ?>
                 </fieldset>
             </li>
+        <?php endif; ?>
 	    </ul>
     </form>
-	<span class="help"><?php echo 'Vous pouvez modifier votre recherche en direct grâce aux filtres ci-dessus.' ?></span>
+	<span class="help">
+        <?php $add_filter_form = new AddPropertyFilterForm() ?>
+        <?php if($sf_request->getParameter('show_add_filter_form')): ?>
+        Choisissez le filtre à ajouter:
+        <form class="add_filter" action="<?php echo url_for('@add_property_filter') ?>" method="post">
+            <?php echo $add_filter_form['filter'] ?>
+            <input type="submit" value="Ajouter">
+            <a href="<?php echo url_for('@property_index') ?>">Annuler</a>
+        </form>
+        <?php else: ?>
+            Vous pouvez modifier votre recherche en direct grâce aux filtres ci-dessus.
+        <?php endif; ?>
+    </span>
 </div>
 <div class="property-list-container">
 	<div class="controls">
