@@ -18,12 +18,15 @@ class propertyActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $filters = new PropertyFormFilter();
-    if($request->hasParameter($filters->getName()))
+    $filter_data = $request->getParameter($filters->getName(),
+        $this->getUser()->getAttribute('property_filters', NULL));
+    if(!is_null($filter_data))
     {
-        $filters->bind($request->getParameter($filters->getName()));
+        $filters->bind($filter_data);
         if($filters->isValid())
         {
             $c = $filters->getCriteria();
+            $this->getUser()->setAttribute('property_filters', $filter_data);
         }
     }
 
@@ -53,7 +56,7 @@ class propertyActions extends sfActions
         if($form->isValid())
         {
             $this->getUser()->setAttribute('page_length', $form->getValue('page_length'));
-            $this->forward('property', 'index');
+            $this->redirect($this->generateUrl('property_index'));
         }
     }
 
