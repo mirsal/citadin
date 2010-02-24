@@ -17,7 +17,18 @@ class propertyActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-  	$this->properties = PropertyPeer::doSelect(new Criteria());
+    $filters = new PropertyFormFilter();
+    if($request->hasParameter($filters->getName()))
+    {
+        $filters->bind($request->getParameter($filters->getName()));
+        if($filters->isValid())
+        {
+            $c = $filters->getCriteria();
+        }
+    }
+    if(!isset($c)) $c = new Criteria();
+    $this->properties = PropertyPeer::doSelect($c);
+    $this->filters = $filters;
   }
   
   public function executeShow(sfWebRequest $request)

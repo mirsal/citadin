@@ -12,7 +12,7 @@ div.property-filters-container {
 		line-height: 24px;
 	}
 	
-	div.property-filters-container > ul.filters {
+	div.property-filters-container ul.filters {
 		background: #DBDBDB url(../images/arrow.png) no-repeat bottom center;
 		width: 100%;
 		list-style: none;
@@ -21,7 +21,7 @@ div.property-filters-container {
 		color: #555;
 	}
 	
-		div.property-filters-container > ul.filters > li {
+		div.property-filters-container ul.filters > li {
 			width: 100%;
 			padding: 5px 0;
 			min-height: 22px;
@@ -30,11 +30,11 @@ div.property-filters-container {
 			border-bottom: #aaa 1px solid;
 		}
 		
-		div.property-filters-container > ul.filters > li:first-child {
+		div.property-filters-container ul.filters > li:first-child {
 			background: url(/images/shadow.png) no-repeat scroll center top;
 		}
 		
-		div.property-filters-container > ul.filters > li a.add-filter {
+		div.property-filters-container ul.filters > li a.add-filter {
 			font-size: 11px;
 			line-height: 22px;
 			color: #000;
@@ -42,19 +42,28 @@ div.property-filters-container {
 			background: url(../images/add.png) no-repeat left;
 		}
 		
-		div.property-filters-container > ul.filters > li > form.filter {
+		div.property-filters-container ul.filters > li > fieldset.filter {
 			width: 960px;
 			padding-left: 200px;
 			margin: 0 auto;
 		}
 		
-			div.property-filters-container > ul.filters > li > form.filter span.name {
+			div.property-filters-container ul.filters > li > fieldset.filter span.name {
 				display: block;
 				float: left;
 				margin-right: 5px;
 				width: 200px;
 				text-align: right;
 			}
+
+            div.property-filters-container ul.filters > li > fieldset.filter ul.radio_list {
+                list-style: none;
+                display: inline;
+            }
+
+            div.property-filters-container ul.filters > li > fieldset.filter ul.radio_list > li {
+                display: inline;
+            }
 
 div.property-list-container {
 	background: #fff url(/images/shadow.png) no-repeat scroll center top;

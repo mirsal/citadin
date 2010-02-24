@@ -1,26 +1,22 @@
 <?php use_stylesheet('property_list')?>
 <div class="property-filters-container">
-	<ul class="filters">
-		<li>
-			<form class="filter">
-				<span class="name">Nombre de pièces</span> 
-				<input type="text" /> 
-			</form>
-		</li>
-		<li>
-			<form class="filter">
-				<span class="name">Prix</span>
-				<input type="text" /> 
-			</form>
-		</li>
-		<li>
-			<form class="filter">
-				<span class="name">Lieu</span>
-				<input type="text" />
-				<a class="add-filter">Cliquez pour ajouter un filtre</a>
-			</form>
-		</li>
-	</ul>
+	<form class="filter" action="<?php echo url_for('@property_index')?>">
+	    <ul class="filters">
+	    <?php $i = 0; $count = count($filters) ?>
+	    <?php foreach($filters as $filter): ?>
+		    <li>
+		        <fieldset class="filter">
+		            <span class="name"><?php echo $filter->renderLabel() ?></span>
+                    <?php echo $filter ?>
+                    <?php if(++$i >= $count): ?>
+                        <a class="add-filter">Ajouter un filtre</a>
+                        <input type="submit" />
+                    <?php endif; ?>
+                </fieldset>
+		    </li>
+		<?php endforeach; ?>
+	    </ul>
+    </form>
 	<span class="help"><?php echo 'Vous pouvez modifier votre recherche en direct grâce aux filtres ci-dessus.' ?></span>
 </div>
 <div class="property-list-container">
