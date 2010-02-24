@@ -18,8 +18,10 @@ class propertyActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $filters = new PropertyFormFilter();
+
     $filter_data = $request->getParameter($filters->getName(),
         $this->getUser()->getAttribute('property_filters', NULL));
+
     if(!is_null($filter_data))
     {
         $filters->bind($filter_data);
