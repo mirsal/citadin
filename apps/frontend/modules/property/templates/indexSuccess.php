@@ -1,6 +1,6 @@
 <?php use_stylesheet('property_list')?>
 <div class="property-filters-container">
-	<form class="filter" action="<?php echo url_for('@property_index')?>">
+	<form class="filter" method="post" action="<?php echo url_for('@property_index')?>">
 	    <ul class="filters">
 	    <?php $i = 0; $count = count($filters) ?>
 	    <?php foreach($filters as $filter): ?>
