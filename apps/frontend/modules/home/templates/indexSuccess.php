@@ -20,6 +20,7 @@
                     <h3><a href="<?php echo url_for('property_show', $p) ?>"><?php echo $p->getName() ?></a></h3>
                     <meter class="surface"><?php echo sprintf('%dm²', $p->getSurface()) ?></meter>
                     <address class="location"><?php echo $p->getLocation() ?></address>
+                    <meter class="price"><?php echo sprintf('%d€ CC', $p->getPrice()) ?></meter>
                 </article>
             <?php endforeach; ?>
     	</div>

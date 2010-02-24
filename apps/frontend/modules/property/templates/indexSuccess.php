@@ -48,6 +48,7 @@
     		</h3>
 	    	<meter class="surface"><?php echo sprintf('%dm²', $property->getSurface()) ?></meter>
 	    	<address class="location"><?php echo $property->getLocation() ?></address>
+            <meter class="price"><?php echo sprintf('%d€ CC', $property->getPrice()) ?></meter>
 	    </article>
 	<?php endforeach; ?>
 	</div>
