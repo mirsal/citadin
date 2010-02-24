@@ -29,7 +29,11 @@ div.property-filters-container {
 			font-size: small;
 			border-bottom: #aaa 1px solid;
 		}
-		
+
+        div.property-filters-container ul.filters > li.hidden {
+            display:none;
+        }
+
 		div.property-filters-container ul.filters > li:first-child {
 			background: url(/images/shadow.png) no-repeat scroll center top;
 		}

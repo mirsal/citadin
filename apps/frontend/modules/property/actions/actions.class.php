@@ -43,6 +43,16 @@ class propertyActions extends sfActions
     if($request->hasParameter('page'))
         $pager->setPage($request->getParameter('page'));
 
+    $visible_fields = array('name', 'location', 'surface');
+    foreach($filters as $field_name => $field)
+    {
+        if(!$filters->getValue($field_name) or $field->hasError())
+            $visible_fields[] = $field_name;
+    }
+
+    $this->getUser()->setAttribute('visible_filters', array_unique($visible_fields));
+
+    //var_dump($this->getUser()->getAttribute('visible_filters'));
     $pager->init();
 
     $this->filters = $filters;

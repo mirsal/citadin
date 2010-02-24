@@ -1,20 +1,24 @@
 <?php use_stylesheet('property_list')?>
 <div class="property-filters-container">
 	<form class="filter" method="post" action="<?php echo url_for('@property_index')?>">
-	    <ul class="filters">
-	    <?php $i = 0; $count = count($filters) ?>
-	    <?php foreach($filters as $filter): ?>
-		    <li>
+        <ul class="filters">
+	    <?php foreach($filters as $filter_name => $filter): ?>
+		    <li class="<?php !in_array($filter_name, $sf_user->getAttribute('visible_filters', array())) and print('hidden')?>">
 		        <fieldset class="filter">
 		            <span class="name"><?php echo $filter->renderLabel() ?></span>
                     <?php echo $filter ?>
-                    <?php if(++$i >= $count): ?>
-                        <a class="add-filter" href="#">Ajouter un filtre</a>
-                        <input type="submit" value="Rechercher"/>
-                    <?php endif; ?>
                 </fieldset>
 		    </li>
 		<?php endforeach; ?>
+            <li>
+                <fieldset class="filter">
+                    <span class="name">&nbsp;</span>
+                    <a class="add-filter" href="#">Ajouter un filtre</a>
+                <?php if(count($sf_user->getAttribute('visible_filters', array()))): ?>
+                    <input type="submit" value="Rechercher"/>
+                <?php endif; ?>
+                </fieldset>
+            </li>
 	    </ul>
     </form>
 	<span class="help"><?php echo 'Vous pouvez modifier votre recherche en direct grâce aux filtres ci-dessus.' ?></span>
