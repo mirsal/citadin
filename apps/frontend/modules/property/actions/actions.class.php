@@ -29,7 +29,10 @@ class propertyActions extends sfActions
 
     if(!isset($c)) $c = new Criteria();
 
-    $pager = new sfPropelPager('Property', 2);
+    $pager = new sfPropelPager('Property',
+        $this->getUser()->getAttribute('page_length',
+            sfConfig::get('app_search_default_page_length', 12)));
+
     $pager->setCriteria($c);
 
     if($request->hasParameter('page'))
@@ -41,6 +44,22 @@ class propertyActions extends sfActions
     $this->pager = $pager;
   }
   
+  public function executeUpdatePageLength(sfWebRequest $request)
+  {
+    $form = new PageLengthForm();
+    if($request->hasParameter('page_length'))
+    {
+        $form->bind($request->getParameter('page_length'));
+        if($form->isValid())
+        {
+            $this->getUser()->setAttribute('page_length', $form->getValue('page_length'));
+            $this->forward('property', 'index');
+        }
+    }
+
+    $this->forward404();
+  }
+
   public function executeShow(sfWebRequest $request)
   {
   	$property = $this->getRoute()->getObject();

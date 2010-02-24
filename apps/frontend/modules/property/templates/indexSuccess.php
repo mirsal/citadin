@@ -9,8 +9,8 @@
 		            <span class="name"><?php echo $filter->renderLabel() ?></span>
                     <?php echo $filter ?>
                     <?php if(++$i >= $count): ?>
-                        <a class="add-filter">Ajouter un filtre</a>
-                        <input type="submit" />
+                        <a class="add-filter" href="#">Ajouter un filtre</a>
+                        <input type="submit" value="Rechercher"/>
                     <?php endif; ?>
                 </fieldset>
 		    </li>
@@ -27,11 +27,9 @@
                 <?php echo sprintf($pager->getNbResults() > 1 ? '%d réponses' : '%d réponse', $pager->getNbResults()) ?>
             </strong>
     	</h2>
-    	<form class="page-length">
-    		<label>Nombre de résultats par page</label>
-    		<select>
-    			<option>12</option>
-    		</select>
+        <form class="page-length" method="post", action="<?php echo url_for('@update_property_page_length') ?>">
+            <?php echo new PageLengthForm() ?>
+            <input type="submit" value="Appliquer" />
     	</form>
     </div>
     <hr />

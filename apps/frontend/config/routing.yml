@@ -12,6 +12,10 @@ property_index:
   url: /property
   param: { module: property, action: index }
 
+update_property_page_length:
+  url: /property/update_page_length
+  param: { module: property, action: updatePageLength }
+
 property_show:
   url: /property/:id
   class: sfPropelRoute
