@@ -17,6 +17,8 @@ property_show:
   class: sfPropelRoute
   options: { model: Property, type: object }
   param: { module: property, action: show }
+  requirements:
+    id: \d+
 
 # default rules
 homepage:

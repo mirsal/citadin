@@ -26,9 +26,19 @@ class propertyActions extends sfActions
             $c = $filters->getCriteria();
         }
     }
+
     if(!isset($c)) $c = new Criteria();
-    $this->properties = PropertyPeer::doSelect($c);
+
+    $pager = new sfPropelPager('Property', 2);
+    $pager->setCriteria($c);
+
+    if($request->hasParameter('page'))
+        $pager->setPage($request->getParameter('page'));
+
+    $pager->init();
+
     $this->filters = $filters;
+    $this->pager = $pager;
   }
   
   public function executeShow(sfWebRequest $request)

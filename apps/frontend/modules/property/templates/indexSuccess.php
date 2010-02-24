@@ -23,8 +23,9 @@
 	<div class="controls">
     	<h2>
     		<span><?php echo 'Résultats de votre recherche' ?> - </span>
-    		<?php $properties_count = count($properties) ?>
-    		<strong><?php echo sprintf($properties_count > 1 ? '%d réponses' : '%d réponse', $properties_count) ?></strong>
+            <strong>
+                <?php echo sprintf($pager->getNbResults() > 1 ? '%d réponses' : '%d réponse', $pager->getNbResults()) ?>
+            </strong>
     	</h2>
     	<form class="page-length">
     		<label>Nombre de résultats par page</label>
@@ -35,7 +36,7 @@
     </div>
     <hr />
 	<div class="property-list wrapper">
-	<?php foreach ($properties as $property): ?>
+	<?php foreach ($pager->getResults() as $property): ?>
 	    <article class="rental">
             <figure class="thumbnail">
                 <a href="<?php echo url_for('property_show', $property)?>">
