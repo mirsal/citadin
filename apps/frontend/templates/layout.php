@@ -40,6 +40,63 @@
 		</div>
 	</header>
 	<div class="separator"></div>
+    <div class="search_form_wrapper">
+        <div class="search_form">
+            <form class="manual_search">
+            <h2>Recherche Manuelle</h2>
+	            <fieldset class="left">
+		            <label>Type de Bien</label>
+		            <select>
+			            <option>Vente</option>
+			            <option>Location</option>
+		            </select>
+	            </fieldset>
+
+	            <fieldset class="right">
+		            <label>Nombre de pièces</label>
+		            <input type="text" size="3" />
+	            </fieldset>
+
+	            <fieldset class="left">
+		            <label>Situé à</label>
+		            <input type="text" size="12" />
+	            </fieldset>
+
+	            <fieldset class="right">
+		            <label>Nombre de chambres</label>
+		            <input type="text" size="3" />
+	            </fieldset>
+
+	            <fieldset class="topspace left">
+		            <h4>Budget (&euro;)</h4>
+		            <label>Min</label>
+		            <input type="text" size="4" />
+		            <label>Max</label>
+		            <input type="text" size="4" />
+	            </fieldset>
+
+	            <fieldset class="topspace right">
+		            <h4>Surface (m²)</h4>
+		            <label>Min</label>
+		            <input type="text" size="4"/>
+		            <label>Max</label>
+		            <input type="text" size="4" />
+	            </fieldset>
+
+	            <input type="submit" class="submit" value="Lancer la recherche" />
+            </form>
+            <form class="assisted_search">
+                <h2>Recherche assistée</h2>
+                <p class="help">Nos conseillers peuvent rechercher gratuitement un bien pour vous. Remplissez le formulaire ci-dessous et nous vous contacterons avec nos résultats</p>
+                <fieldset class="left">
+                    <input type="text" value="Votre nom" />
+                    <input type="text" value="Votre adresse e-mail" />
+                    <textarea>Décrivez ce que vous recherchez, nous nous occupons du reste</textarea>
+                    <input type="submit" class="submit" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
 		<?php echo $sf_content ?>
     <footer>
 	    <figure class="logo">Citad'in</figure>

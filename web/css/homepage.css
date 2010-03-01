@@ -34,21 +34,6 @@ div.banner
 		position: relative;
 	}
 	
-	div.banner div.content div.search_form
-	{
-		position: absolute;
-		left: 153px;
-		background: url('/images/searchform_background.png') no-repeat;
-		width: 377px;
-		height: 227px;	
-	}
-	
-	div.banner div.content div.search_form h2
-	{
-		color: #FFF;
-		margin: 8px 16px;	
-	}
-	
 	div.banner div.content div.text
 	{
 		width: 600px;
