@@ -171,7 +171,7 @@ div.search_form_wrapper.visible
     {
 	    position: absolute;
 	    top: 0;
-	    left: 0;
+	    left: 15px;
 	    overflow: hidden;
 	    background: #000 /*url('/images/searchform_background.png') no-repeat*/;
         -moz-box-shadow: 0 0 10px #000;
@@ -183,9 +183,15 @@ div.search_form_wrapper.visible
         {
             overflow: hidden;
             float: left;
-            width: 380px;
+            width: 388px;
             padding: 5px 12px;
+            margin-bottom: 12px;
             border-right: #333 1px solid;
+        }
+
+        div.search_form_wrapper div.search_form form.manual_search
+        {
+            width: 356px;
         }
 
         div.search_form_wrapper div.search_form form:hover
@@ -249,7 +255,7 @@ div.search_form_wrapper.visible
                 div.search_form_wrapper div.search_form form fieldset textarea
                 {
                     width: 250px;
-                    height: 75px;
+                    height: 111px;
                     margin: 5px 0 0;
                 }
 
