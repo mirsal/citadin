@@ -28,6 +28,10 @@ property_show:
   requirements:
     id: \d+
 
+show_search_panel:
+  url: /search
+  param: { module: home, action: index, show_search_panel: true }
+
 # default rules
 homepage:
   url:   /

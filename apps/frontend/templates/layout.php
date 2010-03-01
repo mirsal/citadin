@@ -21,7 +21,7 @@
 				<li class="left"></li>
 				<li><a href="<?php echo url_for('homepage')?>">Accueil</a></li>
 				<li class="separator"></li>
-				<li><a href="<?php echo url_for('property_index')?>">Rechercher un bien</a></li>
+				<li><a href="<?php echo url_for('@show_search_panel')?>">Rechercher un bien</a></li>
 				<li class="separator"></li>
 				<li><a href="">Proposer un bien</a><li>
 				<li class="separator"></li>
@@ -40,7 +40,7 @@
 		</div>
 	</header>
 	<div class="separator"></div>
-    <div class="search_form_wrapper">
+    <div class="search_form_wrapper <?php $sf_request->getParameter('show_search_panel') and print('visible')?>">
         <div class="search_form">
             <form class="manual_search">
             <h2>Recherche Manuelle</h2>

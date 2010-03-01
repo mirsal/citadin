@@ -162,6 +162,11 @@ div.search_form_wrapper
     display: none;
 }
 
+div.search_form_wrapper.visible
+{
+    display: inherit;
+}
+
     div.search_form_wrapper div.search_form
     {
 	    position: absolute;
