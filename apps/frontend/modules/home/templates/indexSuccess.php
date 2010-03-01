@@ -8,7 +8,7 @@
     <div class="sub_content">
     	<div class="property-list wrapper">
 	    	<h2>Derniers Ajouts</h2>
-            <?php foreach(PropertyPeer::doSelect(new Criteria()) as $p): ?>
+            <?php foreach(PropertyPeer::getLastProperties(10) as $p): ?>
 		    	<article class="rental">
                     <figure class="thumbnail">
                         <a href="<?php echo url_for('property_show', $p) ?>">

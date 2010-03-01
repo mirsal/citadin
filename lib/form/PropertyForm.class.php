@@ -12,6 +12,7 @@ class PropertyForm extends BasePropertyForm
 {
   public function configure()
   {
+    unset($this['created_at']);
   	$this->widgetSchema['type'] = new sfWidgetFormSelectRadio(array(
   		'choices' => PropertyPeer::getTypes(),
   	));

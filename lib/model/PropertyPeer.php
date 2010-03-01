@@ -24,4 +24,20 @@ class PropertyPeer extends BasePropertyPeer
 	    
 	    return $values;
 	}
+	
+	public static function getLastPropertiesCriteria($limit, Criteria $criteria = null)
+	{
+        $c = is_null($criteria) ? new Criteria() : clone $criteria;
+
+        if($limit)
+            $c->setLimit($limit);
+
+        $c->addDescendingOrderByColumn(self::CREATED_AT);
+        return $c;
+	}
+
+	public static function getLastProperties($limit, Criteria $c = null)
+    {
+        return self::doSelect(self::getLastPropertiesCriteria($limit, $c));
+    }
 }

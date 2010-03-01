@@ -2,6 +2,7 @@ propel:
   property:
     _attributes:  { phpName: Property }
     id:
+    created_at:
     name:         { type: varchar(128), required: true }
     location:     { type: varchar(255), required: true }
     type:         { type: varchar(64), required: true }

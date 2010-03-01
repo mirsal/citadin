@@ -12,6 +12,7 @@ class Property extends BaseProperty
 		return array(
 			PropertyPeer::translateFieldName(PropertyPeer::ID, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::NAME, BasePeer::TYPE_COLNAME, $keyType),
+			PropertyPeer::translateFieldName(PropertyPeer::CREATED_AT, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::DESCRIPTION, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::LOCATION, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::PRICE, BasePeer::TYPE_COLNAME, $keyType),
