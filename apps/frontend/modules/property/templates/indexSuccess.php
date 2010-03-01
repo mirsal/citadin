@@ -24,8 +24,8 @@
 	    </ul>
     </form>
 	<span class="help">
-        <?php $add_filter_form = new AddPropertyFilterForm() ?>
         <?php if($sf_request->getParameter('show_add_filter_form')): ?>
+        <?php $add_filter_form = new AddPropertyFilterForm() ?>
         Choisissez le filtre à ajouter:
         <form class="add_filter" action="<?php echo url_for('@add_property_filter') ?>" method="post">
             <?php echo $add_filter_form['filter'] ?>

@@ -44,7 +44,7 @@ class propertyActions extends sfActions
         $pager->setPage($request->getParameter('page'));
 
     $visible_fields = array_merge(
-        $this->getUser()->getAttribute('visible_filters'),
+        $this->getUser()->getAttribute('visible_filters', array()),
         array('name', 'location', 'surface')
     );
 
