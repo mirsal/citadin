@@ -25,7 +25,7 @@
 				<li class="separator"></li>
 				<li><a href="">Proposer un bien</a><li>
 				<li class="separator"></li>
-				<li><a href="<?php echo url_for('contact') ?>">Nous contacter</a></li>
+				<li><a href="<?php echo url_for('contact') ?>">Qui sommes-nous ?</a></li>
 				<li class="separator"></li>
 				<li class="form">
 					<form>
