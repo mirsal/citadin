@@ -159,6 +159,7 @@ div.search_form_wrapper
     width: 960px;
     margin: 0 auto;
     z-index: 10;
+    display: none;
 }
 
     div.search_form_wrapper div.search_form
