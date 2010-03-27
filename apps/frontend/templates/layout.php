@@ -42,20 +42,17 @@
 	<div class="separator"></div>
     <div class="search_form_wrapper <?php $sf_request->getParameter('show_search_panel') and print('visible')?>">
         <div class="search_form">
-            <form class="manual_search">
+            <?php $manual_search_form = $sf_user->getPropertyFilters(); ?>
+            <form class="manual_search" method="post" action="<?php echo url_for('@property_index')?>">
             <h2>Recherche Manuelle</h2>
 	            <fieldset class="left">
 		            <label>Type de Bien</label>
-		            <select>
-			            <option>Vente</option>
-			            <option>Location</option>
-			            <option>Peu importe</option>
-		            </select>
+                    <?php echo $manual_search_form['type']->render() ?>
 	            </fieldset>
 
 	            <fieldset class="right">
 		            <label>Situé à</label>
-		            <input type="text" size="12" />
+                    <?php echo $manual_search_form['location']->render(array('size' => 12)) ?>
 	            </fieldset>
 
 	            <fieldset class="topspace left">
@@ -76,18 +73,18 @@
 
 	            <fieldset class="topspace left">
 		            <h4>Budget (&euro;)</h4>
-		            <label>Min</label>
-		            <input type="text" size="4" />
-		            <label>Max</label>
-		            <input type="text" size="4" />
+                    <?php echo $manual_search_form['price']->render(array(
+                        'from' => array('size' => 4),
+                        'to' => array('size' => 4)
+                    )); ?>
 	            </fieldset>
 
 	            <fieldset class="topspace right">
 		            <h4>Surface (m²)</h4>
-		            <label>Min</label>
-		            <input type="text" size="4"/>
-		            <label>Max</label>
-		            <input type="text" size="4" />
+                    <?php echo $manual_search_form['surface']->render(array(
+                        'from' => array('size' => 4),
+                        'to' => array('size' => 4)
+                    )); ?>
 	            </fieldset>
 
 	            <input type="submit" class="submit" value="Lancer la recherche" />
