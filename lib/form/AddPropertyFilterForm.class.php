@@ -1,6 +1,6 @@
 <?php
 
-class AddPropertyFilterForm extends sfForm
+class AddPropertyFilterForm extends BaseForm
 {
     public function configure()
     {

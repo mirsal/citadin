@@ -1,6 +1,6 @@
 <?php
 
-class PageLengthForm extends sfForm
+class PageLengthForm extends BaseForm
 {
     public function configure()
     {
