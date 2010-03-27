@@ -3,7 +3,7 @@ default:
     content-type: text/html
 
   metas:
-    title:        Citad\'in agence immobilière à Lyon
+    title:        Citad'in agence immobilière à Lyon
     description:  Citad'in est une agence immobilière basée à Lyon
     keywords:     citadin, immobilier, vente, location, appartements
     language:     fr

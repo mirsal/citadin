@@ -117,7 +117,7 @@ class propertyActions extends sfActions
   	    $img->getPropertyId() === $property->getId())
   	    $this->image = $img;
 
-    $this->getResponse()->setTitle('test');
+    $this->getResponse()->setTitle(sprintf("Citad'in - %s à %s, %sm²", $property->getName(), $property->getLocation(), $property->getSurface()));
   	if($request->isXmlHttpRequest() and isset($this->image))
   	    return $this->renderText($this->generateUrl('render_attachment',
   	        array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_BIG)));
