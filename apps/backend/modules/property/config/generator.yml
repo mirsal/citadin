@@ -13,7 +13,8 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:
+          title: Liste des biens
       filter:  ~
       form:    ~
       edit:    ~

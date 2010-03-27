@@ -23,6 +23,28 @@
 		box-shadow: 0 0 10px #000;
 		
 	}
+
+	#sf_admin_container a.toggle-filters {
+        color: #000;
+        font-size: small;
+        background: #DA2121 url('../images/arrow_black_open.png') no-repeat right 12px;
+        padding: 10px 15px 10px 10px;
+        margin-left: 10px;
+        border-left: #a00 1px solid;
+        border-right: #a00 1px solid;
+        text-shadow: #f77 -1px 1px 1px;
+    }
+
+    #sf_admin_container a.toggle-filters.off {
+        color: #400;
+        background: transparent url('../images/arrow_black_open.png') no-repeat right 12px;
+    }
+
+    #sf_admin_container a.toggle-filters:hover
+    {
+        color: #000;
+        background-color: #DA2121;
+    }
 	
 	#sf_admin_container .sf_admin_text input {
 		font-size: medium;
