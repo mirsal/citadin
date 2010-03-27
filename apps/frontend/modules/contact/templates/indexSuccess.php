@@ -22,6 +22,8 @@
 					Nous proposons également un service d’aide et de conseil aux propriétaires, réalisons Etat Des Lieux et recherche de locataires, montage de dossiers locatif et étude de solvabilité puis mise en relation avec les futurs occupants.<br/>
 					Nos prestations sont adaptées à chacun et en fonction des besoins de tous.
 				</div>
+				<div class="triangle">
+				</div>
 			</div>
 			
 			

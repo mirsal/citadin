@@ -105,10 +105,10 @@
     <footer>
 	    <figure class="logo">Citad'in</figure>
 		<nav><ul>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Recherche manuelle</a></li>
-				<li><a href="#">Recherche assistée</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="<?php echo url_for('homepage')?>">Accueil</a></li>
+				<li><a href="<?php echo url_for('@show_search_panel')?>">Rechercher un bien</a></li>
+				<li><a href="">Proposer un bien</a></li>
+				<li><a href="<?php echo url_for('contact') ?>">Contact</a></li>
 			</ul></nav>
     </footer>
 </body>
