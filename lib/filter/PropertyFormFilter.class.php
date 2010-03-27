@@ -40,9 +40,13 @@ class PropertyFormFilter extends BasePropertyFormFilter
   	
   	$this->widgetSchema['price'] = new iiwiWidgetFormFilterRange();
     $this->widgetSchema['surface'] = new iiwiWidgetFormFilterRange();
+    $this->widgetSchema['rooms'] = new iiwiWidgetFormFilterRange();
+    $this->widgetSchema['bedrooms'] = new iiwiWidgetFormFilterRange();
     
     $this->validatorSchema['price'] = new iiwiValidatorRange();
     $this->validatorSchema['surface'] = new iiwiValidatorRange();
+    $this->validatorSchema['rooms'] = new iiwiValidatorRange();
+    $this->validatorSchema['bedrooms'] = new iiwiValidatorRange();
 
     $this->getWidgetSchema()->setNameFormat('property_filters[%s]');
   }
@@ -51,7 +55,9 @@ class PropertyFormFilter extends BasePropertyFormFilter
   {
     return array_merge(parent::getFields(), array(
         'price'   => 'Range',
-        'surface' => 'Range'
+        'surface' => 'Range',
+        'bedrooms' => 'Range',
+        'rooms' => 'Range'
     ));
   }
   

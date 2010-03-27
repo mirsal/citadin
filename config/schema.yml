@@ -9,7 +9,15 @@ propel:
     description:  { type: longvarchar }
     price:        { type: integer }
     surface:      { type: integer }
+    rooms:        { type: integer }
+    bedrooms:     { type: integer }
     orientation:  { type: varchar(128) }
+    garage:       { type: boolean }
+    parking:      { type: boolean }
+    balcony:      { type: boolean }
+    terrace:      { type: boolean }
+    cellar:       { type: boolean }
+    attic:        { type: boolean }
 
   file_attachment:
     _attributes: { phpName: FileAttachment }
