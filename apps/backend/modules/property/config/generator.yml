@@ -17,5 +17,7 @@ generator:
           title: Liste des biens
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:
+          title: Modifier un bien
+      new:
+          title: Ajouter un bien
