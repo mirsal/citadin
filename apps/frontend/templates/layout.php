@@ -57,18 +57,18 @@
 
 	            <fieldset class="topspace left">
 	                <h4>Nombre de pièces</h4>
-		            <label>Min</label>
-		            <input type="text" size="4" />
-		            <label>Max</label>
-		            <input type="text" size="4" />
+                    <?php echo $manual_search_form['rooms']->render(array(
+                        'from' => array('size' => 4),
+                        'to' => array('size' => 4)
+                    )) ?>
 	            </fieldset>
 
 	            <fieldset class="topspace right">
-		            <h4>Nombre de chambres</h4>
-		            <label>Min</label>
-		            <input type="text" size="4" />
-		            <label>Max</label>
-		            <input type="text" size="4" />
+	                <h4>Nombre de chambres</h4>
+                    <?php echo $manual_search_form['bedrooms']->render(array(
+                        'from' => array('size' => 4),
+                        'to' => array('size' => 4)
+                    )) ?>
 	            </fieldset>
 
 	            <fieldset class="topspace left">

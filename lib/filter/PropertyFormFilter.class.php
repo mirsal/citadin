@@ -18,13 +18,13 @@ class PropertyFormFilter extends BasePropertyFormFilter
     $this->widgetSchema['description'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     
     $this->widgetSchema['type'] = new sfWidgetFormSelectRadio(array(
-  		'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Any'))
+        'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Peu importe'))
   	));
   	
   	$orientations = PropertyPeer::getAllValuesForColumn(PropertyPeer::ORIENTATION);
   	$this->widgetSchema['orientation'] = new sfWidgetFormSelect(array(
   		'choices' => array_merge(
-  		    array('ORIENTATION_ANY' => 'Any'),
+            array('ORIENTATION_ANY' => 'Peu importe'),
   		    $orientations ? array_combine($orientations, $orientations) : array())
   	));
   	
@@ -47,6 +47,24 @@ class PropertyFormFilter extends BasePropertyFormFilter
     $this->validatorSchema['surface'] = new iiwiValidatorRange();
     $this->validatorSchema['rooms'] = new iiwiValidatorRange();
     $this->validatorSchema['bedrooms'] = new iiwiValidatorRange();
+
+    $this->widgetSchema['price']->setOption('template', '<label>min</label> %from% <label>max</label> %to%');
+    $this->widgetSchema['surface']->setOption('template', '<label>min</label> %from% <label>max</label> %to%');
+    $this->widgetSchema['rooms']->setOption('template', '<label>min</label> %from% <label>max</label> %to%');
+    $this->widgetSchema['bedrooms']->setOption('template', '<label>min</label> %from% <label>max</label> %to%');
+
+    $this->getWidgetSchema()->setLabels(array(
+        'location' => 'Localité',
+        'type' => 'Type de bien',
+        'price' => 'Budget (€)',
+        'surface' => 'Surface (m²)',
+        'rooms' => 'Nombre de pièces',
+        'bedrooms' => 'Nombre de chambres',
+        'balcony' => 'Balcon',
+        'terrace' => 'Terrasse',
+        'cellar' => 'Cave',
+        'attic' => 'Grenier'
+    ));
 
     $this->getWidgetSchema()->setNameFormat('property_filters[%s]');
   }

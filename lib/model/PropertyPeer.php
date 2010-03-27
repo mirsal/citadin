@@ -7,7 +7,7 @@ class PropertyPeer extends BasePropertyPeer
 	
 	public static function getTypes()
 	{
-		return array (self::TYPE_SALE => "For sale", self::TYPE_RENTAL => "For rent");
+		return array (self::TYPE_SALE => "À vendre", self::TYPE_RENTAL => "À louer");
 	}
 	
 	public static function getAllValuesForColumn($column, Criteria $criteria = null, PropelPDO $con = null)
