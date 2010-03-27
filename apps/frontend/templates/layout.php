@@ -91,7 +91,7 @@
             </form>
             <form class="assisted_search">
                 <h2>Recherche assistée</h2>
-                <p class="help">Nos conseillers peuvent rechercher gratuitement un bien pour vous. Remplissez le formulaire ci-dessous et nous vous contacterons avec nos résultats</p>
+                <p class="help">Nos chasseurs immobiliers peuvent également vous accompagner dans une recherche personnalisée et adaptée à vos besoins.<br />Remplissez le formulaire ci-dessous et nous vous contacterons au plus vite.</p>
                 <fieldset class="left">
                     <input type="text" value="Votre nom" />
                     <input type="text" value="Votre adresse e-mail" />
