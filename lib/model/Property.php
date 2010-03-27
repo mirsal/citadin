@@ -36,4 +36,22 @@ class Property extends BaseProperty
 	    $ret = $this->getFileAttachments($c);
 	    return isset($ret[0]) ? $ret[0] : null;
 	}
+
+	public function getSimilarPropertiesCriteria(Criteria $criteria = null)
+	{
+	    $c = is_null($criteria) ? new Criteria() : $c;
+
+	    $ct = $c->getNewCriterion(PropertyPeer::NAME, $this->getName(), Criteria::LIKE);
+	    $ct->addAnd($c->getNewCriterion(PropertyPeer::LOCATION, $this->getLocation(), Criteria::LIKE));
+	    $ct->addAnd($c->getNewCriterion(PropertyPeer::TYPE, $this->getType()));
+	    $ct->addAnd($c->getNewCriterion(PropertyPeer::ID, $this->getId(), Criteria::NOT_IN));
+
+	    $c->add($ct);
+	    return $c;
+	}
+
+	public function getSimilarProperties(Criteria $c = null,  PropelPDO $con = null)
+	{
+	    return PropertyPeer::doSelect($this->getSimilarPropertiesCriteria($c), $con);
+	}
 }

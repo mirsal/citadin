@@ -17,7 +17,8 @@
 			</ul>
 			<figure class="pic">
 				<div class="mask">
-					<img src="<?php echo url_for('render_attachment', array('sf_subject' => isset($image) ? $image : $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
+				    <?php $img = isset($image) ? $image : $property->getRandomFileAttachment() ?>
+					<img src="<?php if(!is_null($img)) echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
 				</div>
 				<hgroup>
 					<?php echo sprintf('%d €', $property->getPrice())?> - 
@@ -27,14 +28,16 @@
 			</figure>
 		</section>
 		<section class="sub">
+	        <?php if($similar_properties = $property->getSimilarProperties()): ?>
 		   	<div class="property-list wrapper">
 		    	<h2>Biens similaires</h2>
-                <?php foreach(PropertyPeer::doSelect(new Criteria()) as $p): ?>
+                <?php foreach($property->getSimilarProperties() as $p): ?>
 		    	<article class="rental">
                     <figure class="thumbnail">
                         <a href="<?php echo url_for('property_show', $p) ?>">
                             <div class="mask">
-                                <img src="<?php echo url_for('render_attachment', array('sf_subject' => $p->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
+                                <?php $img = $p->getRandomFileAttachment(); ?>
+                                <img src="<?php if(!is_null($img)) echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_SMALL))?>" />
                             </div>
                         </a>
                     </figure>
@@ -44,9 +47,9 @@
                     <address class="location"><?php echo $p->getLocation() ?></address>
                     <meter class="price"><?php echo sprintf('%d€ CC', $p->getPrice()) ?></meter>
                 </article>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
 	    	</div>
-	    	<a class="more">Plus de biens similaires</a>
+	    	<?php endif; ?>
 		</section>
 	</div>
 	<aside>

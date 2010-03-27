@@ -58,7 +58,8 @@
             <figure class="thumbnail">
                 <a href="<?php echo url_for('property_show', $property)?>">
                     <div class="mask">
-                        <img src="<?php echo url_for('render_attachment', array('sf_subject' => $property->getRandomFileAttachment(), 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
+                        <?php $img = $property->getRandomFileAttachment() ?>
+                        <img src="<?php if(!is_null($img)) echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
                     </div>
                 </a>
             </figure>
