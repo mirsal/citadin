@@ -12,9 +12,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+          created_at: { label: Date d'ajout }
+          name:       { label: Nature du bien }
+          location:   { label: Localité }
+          price:      { label: Prix / Loyer (€) }
+          surface:    { label: Surface (m²) }
       list:
           title: Liste des biens
+          display: [=name, location, type, price, created_at]
       filter:  ~
       form:    ~
       edit:
