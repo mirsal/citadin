@@ -19,6 +19,9 @@ class propertyActions extends sfActions
   {
     $filters = new PropertyFormFilter();
 
+    if($request->getParameter('reset_filters'))
+        $this->getUser()->setAttribute('property_filters', NULL);
+
     $filter_data = $request->getParameter($filters->getName(),
         $this->getUser()->getAttribute('property_filters', NULL));
 
@@ -28,10 +31,10 @@ class propertyActions extends sfActions
         if($filters->isValid())
         {
             $c = $filters->getCriteria();
-            $this->getUser()->setAttribute('property_filters', $filter_data);
         }
     }
 
+    $this->getUser()->setAttribute('property_filters', $filter_data);
     if(!isset($c)) $c = new Criteria();
 
     $pager = new sfPropelPager('Property',
@@ -43,16 +46,9 @@ class propertyActions extends sfActions
     if($request->hasParameter('page'))
         $pager->setPage($request->getParameter('page'));
 
-    $visible_fields = array_merge(
-        $this->getUser()->getAttribute('visible_filters', array()),
-        array('name', 'location', 'surface')
-    );
-
-    foreach($filters as $field_name => $field)
-    {
-        if(!$filters->getValue($field_name) or $field->hasError())
-            $visible_fields[] = $field_name;
-    }
+    $default_fields = array('type', 'location', 'surface', 'price');
+    $visible_fields = $request->getParameter('reset_filters') ?
+        $default_fields : $this->getUser()->getAttribute('visible_filters', $default_fields);
 
     $this->getUser()->setAttribute('visible_filters', array_unique($visible_fields));
 
@@ -95,6 +91,22 @@ class propertyActions extends sfActions
             $this->redirect($this->generateUrl('property_index'));
         }
     }
+  }
+
+  public function executeRemoveFilter(sfWebRequest $request)
+  {
+    $this->forward404Unless($request->hasParameter('filter'));
+
+    $this->getUser()->setAttribute('visible_filters', array_diff(
+        $this->getUser()->getAttribute('visible_filters', array()),
+        array($request->getParameter('filter')))
+    );
+
+    $filter_data = $this->getUser()->getAttribute('property_filters');
+    unset($filter_data[$request->getParameter('filter')]);
+    $this->getUser()->setAttribute('property_filters', $filter_data);
+
+    $this->redirect('@property_index');
   }
 
   public function executeShow(sfWebRequest $request)

@@ -43,6 +43,8 @@ class PropertyFormFilter extends BasePropertyFormFilter
     
     $this->validatorSchema['price'] = new iiwiValidatorRange();
     $this->validatorSchema['surface'] = new iiwiValidatorRange();
+
+    $this->getWidgetSchema()->setNameFormat('property_filters[%s]');
   }
   
   public function getFields()

@@ -6,7 +6,8 @@
 		    <li class="<?php !in_array($filter_name, $sf_user->getAttribute('visible_filters', array())) and print('hidden')?>">
 		        <fieldset class="filter">
 		            <span class="name"><?php echo $filter->renderLabel() ?></span>
-                    <?php echo $filter ?>
+                    <?php echo str_replace('<br />', '', $filter->render()) ?>
+                    <a class="delete-filter" href="<?php echo(url_for('remove_property_filter', array('filter' => $filter_name))) ?>">Supprimer ce filtre</a>
                 </fieldset>
 		    </li>
 		<?php endforeach; ?>

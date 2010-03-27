@@ -8,5 +8,11 @@ class PropertyFormFilterFrontend extends PropertyFormFilter
         $this->widgetSchema['type'] = new sfWidgetFormSelect(array(
   		    'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Any'))
   	    ));
+
+        $this->widgetSchema['price']->setOption('template',
+            '<label>Min</label> %from% <label>Max</label> %to%');
+
+        $this->widgetSchema['surface']->setOption('template',
+            '<label>Min</label> %from% <label>Max</label> %to%');
     }
 }

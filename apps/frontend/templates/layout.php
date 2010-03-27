@@ -43,7 +43,7 @@
     <div class="search_form_wrapper <?php $sf_request->getParameter('show_search_panel') and print('visible')?>">
         <div class="search_form">
             <?php $manual_search_form = $sf_user->getPropertyFilters(); ?>
-            <form class="manual_search" method="post" action="<?php echo url_for('@property_index')?>">
+            <form class="manual_search" method="post" action="<?php echo url_for('property_index', array('reset_filters' => true))?>">
             <h2>Recherche Manuelle</h2>
 	            <fieldset class="left">
 		            <label>Type de Bien</label>
@@ -96,7 +96,7 @@
                     <input type="text" value="Votre nom" />
                     <input type="text" value="Votre adresse e-mail" />
                     <textarea>Décrivez ce que vous recherchez, nous nous occupons du reste</textarea>
-                    <input type="submit" class="submit" />
+                    <input type="submit" class="submit" value="Envoyer"/>
                 </fieldset>
             </form>
         </div>

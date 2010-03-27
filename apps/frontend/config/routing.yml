@@ -16,6 +16,10 @@ add_property_filter:
   url: /property/add_filter
   param: { module: property, action: addFilter }
 
+remove_property_filter:
+  url: /property/remove_filter
+  param: { module: property, action: removeFilter }
+
 update_property_page_length:
   url: /property/update_page_length
   param: { module: property, action: updatePageLength }

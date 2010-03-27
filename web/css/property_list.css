@@ -60,6 +60,24 @@ div.property-filters-container {
 				text-align: right;
 			}
 
+			div.property-filters-container ul.filters > li > fieldset.filter a.delete-filter
+			{
+			    background: url(../images/delete.png) no-repeat left center;
+			    display: inline;
+			    line-height: 12px;
+			    padding: 8px 0;
+			    padding-left: 15px;
+			    text-decoration: none;
+			    font-size: x-small;
+			    color: #aaa;
+			}
+
+			div.property-filters-container ul.filters > li > fieldset.filter a.delete-filter:hover
+			{
+			    background-image: url(../images/delete_hover.png);
+			    color: #444;
+			}
+
             div.property-filters-container ul.filters > li > fieldset.filter ul.radio_list {
                 list-style: none;
                 display: inline;
