@@ -5,7 +5,7 @@ div.banner
 {
 	width: 960px;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: hidden;
 }
 
 	div.banner div.shadow_left,
@@ -34,17 +34,25 @@ div.banner
 		position: relative;
 	}
 	
-	div.banner div.content div.text
-	{
-		width: 600px;
-		margin: 20px auto 0;
-		overflow: auto;
-		border-radius: 8px;
-		-moz-border-radius: 8px;
-		-webkit-border-radius: 8px;
-		padding: 8px;
-		background: #EEE;
-	}
+	    div.banner div.content div.text
+	    {
+		    width: 600px;
+		    margin: 20px auto 0;
+		    overflow: auto;
+		    border-radius: 8px;
+		    -moz-border-radius: 8px;
+		    -webkit-border-radius: 8px;
+		    padding: 8px;
+		    background: #EEE;
+	    }
+
+	    div.banner div.content span.slogan {
+	        font-size: 80px;
+	        color: #FFF;
+	        margin: 220px 10px 0 30px;
+	        text-shadow: 1px 1px 10px #000;
+	        display: block;
+	    }
 
 /* Sub Content */
 div.sub_content

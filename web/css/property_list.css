@@ -10,8 +10,13 @@ div.property-filters-container {
 		font-size: 11px;
 		text-align: center;
 		line-height: 24px;
+		overflow: hidden;
 	}
-	
+
+    div.property-filters-container > span.help form.add_filter {
+        margin-bottom: 5px;
+    }
+
 	div.property-filters-container ul.filters {
 		background: #DBDBDB url(../images/arrow.png) no-repeat bottom center;
 		width: 100%;
