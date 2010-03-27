@@ -35,12 +35,6 @@
 		<?php echo $sf_content ?>
     <footer>
 	    <figure class="logo">Citad'in</figure>
-		<nav><ul>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Recherche manuelle</a></li>
-				<li><a href="#">Recherche assistée</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul></nav>
     </footer>
 </body>
 </html>
