@@ -34,22 +34,96 @@ div.banner
 		position: relative;
 	}
 	
-	    div.banner div.content div.text
+		div.banner div.content div.contact
+		{
+			float: right;
+			background: #FFF;
+			width: 160px;
+			height: 245px;
+			padding: 80px 10px 10px 35px;
+			text-align: center;
+			font-family: Arial;
+		}
+		
+		div.banner div.content div.contact h1
+		{
+			margin: 5px 0 8px 0;
+		}
+		
+		div.banner div.content div.contact address
+		{
+			margin-bottom: 30px
+		}
+		
+		div.banner div.content div.contact p
+		{
+			text-align: left;
+			margin: 0;
+			line-height: 16px;
+			margin: 8px 0 8px 20px;
+			color: #555;
+		}
+		
+		div.banner div.content div.contact p label
+		{
+			text-indent: -9999px;
+			display: block;
+			width: 16px;
+			height: 16px;
+			float: left;
+			margin-right: 10px; 
+		}
+		
+		div.banner div.content div.contact p.phone label
+		{
+			background: url('/images/phone.png');
+		}
+		
+		div.banner div.content div.contact p.fax label
+		{
+			background: url('/images/fax.png');
+		}
+		
+		div.banner div.content div.contact p.mobile label
+		{
+			background: url('/images/mobile.png');
+		}
+	
+		div.banner div.content div.figure,
+		div.banner div.content div.info_bulle
+		{
+			position: absolute;
+	    	top: 37px;
+		}
+		
+		div.banner div.content div.info_bulle
+		{
+		    	height: 260px;
+			    background: #FFF;
+			    color: #333;
+			    left: 30px;
+			    width: 450px;
+			    overflow: hidden;
+		}
+			    
+		    div.banner div.content div.text
+		    {
+			    padding: 10px;
+			    font-size: small;
+			    text-align: justify;
+		    }
+	    
+	    div.banner div.content div.figure
 	    {
-		    width: 600px;
-		    margin: 20px auto 0;
-		    overflow: auto;
-		    border-radius: 8px;
-		    -moz-border-radius: 8px;
-		    -webkit-border-radius: 8px;
-		    padding: 8px;
-		    background: #EEE;
+	    	height: 300px;
+	    	width: 250px;
+	    	left: 492px;
 	    }
 
 	    div.banner div.content span.slogan {
-	        font-size: 80px;
+	        font-size: 42px;
 	        color: #FFF;
-	        margin: 220px 10px 0 30px;
+	        margin: 260px 10px 0 30px;
 	        text-shadow: 1px 1px 10px #000;
 	        display: block;
 	    }

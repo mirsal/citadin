@@ -1,2 +1,7 @@
 # default values
-#all:
+all:
+  contact:
+    address: 57, rue de la thibaudière 69007 LYON
+    mobile: "0648471616"
+    phone: "0950441951"
+    fax: "0955441951"

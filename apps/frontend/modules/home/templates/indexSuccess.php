@@ -2,7 +2,7 @@
 <div class="home-page container">
 	<div class="banner">
 		<div class="shadow_left"></div>
-		<div class="content"><span class="slogan">Slogan ici</span></div>
+		<div class="content"><span class="slogan">Une nouvelle façon d’aborder l’immobilier</span></div>
     	<div class="shadow_right"></div>
     </div>
     <div class="sub_content">
