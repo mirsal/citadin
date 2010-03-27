@@ -3,11 +3,11 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    title:        Citad\'in agence immobilière à Lyon
+    description:  Citad'in est une agence immobilière basée à Lyon
+    keywords:     citadin, immobilier, vente, location, appartements
+    language:     fr
+    robots:       index, follow
 
   stylesheets:    [main.css, layout.css, common.css]
 
