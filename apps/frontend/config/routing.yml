@@ -33,8 +33,12 @@ property_show:
     id: \d+
 
 show_search_panel:
-  url: /search
+  url: /advanced_search
   param: { module: home, action: index, show_search_panel: true }
+  
+full_text_search:
+  url: /search
+  param: { module: property, action: fullTextSearch }
 
 # default rules
 homepage:

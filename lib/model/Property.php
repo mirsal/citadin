@@ -54,4 +54,73 @@ class Property extends BaseProperty
 	{
 	    return PropertyPeer::doSelect($this->getSimilarPropertiesCriteria($c), $con);
 	}
+	
+	public function isActivated()
+	{
+		return $this->getIsActivated();
+	}
+	
+	public function save(PropelPDO $con = null)
+	{
+		$con = $con ? $con : $this->getPeer()->getConnection();
+		$con->beginTransaction();
+		try
+		{
+			$ret = parent::save($con);
+			$this->updateLuceneIndex();
+			$con->commit();
+			return $ret;
+		}
+		catch (Exception $e)
+		{
+			$con->rollBack();
+			throw $e;
+		}
+	}
+	
+	public function delete(PropelPDO $con = null)
+	{
+		$index = $this->getPeer()->getLuceneIndex();
+		 
+		foreach ($index->find('pk:'.$this->getId()) as $hit)
+		{
+			$index->delete($hit->id);
+		}
+		 
+		return parent::delete($con);
+	}
+	
+	public function updateLuceneIndex()
+	{
+		$index = $this->getPeer()->getLuceneIndex();
+		 
+		// remove existing entries
+		foreach ($index->find('pk:'.$this->getId()) as $hit)
+		{
+		  $index->delete($hit->id);
+		}
+		
+		// don't index non-activated property
+		if (!$this->isActivated())
+		{
+		  return;
+		}
+		
+		$doc = new Zend_Search_Lucene_Document();
+		
+		// store job primary key to identify it in the search results
+		$doc->addField(Zend_Search_Lucene_Field::Keyword('pk', $this->getId()));
+		
+		// index property fields
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('name', $this->getName(), 'utf-8'));
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('location', $this->getLocation(), 'utf-8'));
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('type', $this->getType(), 'utf-8'));
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('description', $this->getDescription(), 'utf-8'));
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('surface', $this->getSurface(), 'utf-8'));
+		$doc->addField(Zend_Search_Lucene_Field::UnStored('orientation', $this->getOrientation(), 'utf-8'));
+		
+		// add property to the index
+		$index->addDocument($doc);
+		$index->commit();
+	}
 }

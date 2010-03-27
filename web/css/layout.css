@@ -145,7 +145,13 @@ header
 		                width: 11px;
 		                height: 11px;
 	                }
-
+	                
+		header nav li.form ul.results
+		{
+			position: absolute;
+			display: block;
+		}
+		
 div.separator
 {
 	width: 100%;

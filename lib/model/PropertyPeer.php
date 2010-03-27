@@ -40,4 +40,38 @@ class PropertyPeer extends BasePropertyPeer
     {
         return self::doSelect(self::getLastPropertiesCriteria($limit, $c));
     }
+    
+	static public function getLuceneIndex()
+	{
+		ProjectConfiguration::registerZend();
+		if (file_exists($index = self::getLuceneIndexFile()))
+		{
+			return Zend_Search_Lucene::open($index);
+		}
+		else
+		{
+			return Zend_Search_Lucene::create($index);
+		}
+	}
+	 
+	static public function getLuceneIndexFile()
+	{
+		return sfConfig::get('sf_data_dir').'/properties.'.sfConfig::get('sf_environment').'.index';
+	}
+	
+	static public function getForLuceneQuery($query)
+	{
+		$hits = self::getLuceneIndex()->find($query);
+		$pks = array();
+		foreach ($hits as $hit)
+		{
+			$pks[] = $hit->pk;
+		}
+		 
+		$criteria = new Criteria();
+		$criteria->add(self::ID, $pks, Criteria::IN);
+		$criteria->setLimit(20);
+		 
+		return self::doSelect($criteria);
+	}
 }

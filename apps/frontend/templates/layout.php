@@ -28,12 +28,7 @@
 				<li><a href="<?php echo url_for('contact') ?>">Qui sommes-nous ?</a></li>
 				<li class="separator"></li>
 				<li class="form">
-					<form>
-						<span class="left"></span>
-						<input type="text" class="searchfield" size="10" />
-						<span class="right"></span>
-						<div class="reset"></div>
-					</form>
+					<?php include_component('property', 'fullTextSearch') ?>
 				</li>
 				<li class="right"></li>
 			</ul></nav>
