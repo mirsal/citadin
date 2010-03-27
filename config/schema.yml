@@ -18,7 +18,7 @@ propel:
     terrace:      { type: boolean }
     cellar:       { type: boolean }
     attic:        { type: boolean }
-    is_enabled:   { type: boolean }
+    is_activated: { type: boolean }
 
   file_attachment:
     _attributes: { phpName: FileAttachment }
