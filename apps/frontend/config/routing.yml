@@ -36,9 +36,9 @@ show_search_panel:
   url: /advanced_search
   param: { module: home, action: index, show_search_panel: true }
   
-full_text_search:
-  url: /search
-  param: { module: property, action: fullTextSearch }
+#full_text_search:
+#  url: /search
+#  param: { module: property, action: fullTextSearch }
 
 # default rules
 homepage:
