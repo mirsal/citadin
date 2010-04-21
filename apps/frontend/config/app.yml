@@ -5,3 +5,9 @@ all:
     mobile: "0648471616"
     phone: "0950441951"
     fax: "0955441951"
+
+  emails:
+    from_name: { contact@citadin.fr: "L'équipe citad'in" }
+    assisted_search_subject: "Nous avons bien reçu votre demande"
+    assisted_search_notice_subject: "Y'a un mec qui veut un appart !"
+    send_notices_to: { mirsal.ennaime@gmail.com: Mirsal Ennaime }

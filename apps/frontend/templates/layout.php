@@ -28,7 +28,12 @@
 				<li><a href="<?php echo url_for('contact') ?>">Qui sommes-nous ?</a></li>
 				<li class="separator"></li>
 				<li class="form">
-					<?php include_component('property', 'fullTextSearch') ?>
+					<form>
+						<span class="left"></span>
+						<input type="text" class="searchfield" size="10" />
+						<span class="right"></span>
+						<div class="reset"></div>
+					</form>
 				</li>
 				<li class="right"></li>
 			</ul></nav>
@@ -84,13 +89,14 @@
 
 	            <input type="submit" class="submit" value="Lancer la recherche" />
             </form>
-            <form class="assisted_search">
+            <?php $assisted_search_form = $sf_user->getAssistedSearchRequest() ?>
+            <form class="assisted_search" method="post" action="<?php echo url_for('@send_assisted_search_request')?>">
                 <h2>Recherche assistée</h2>
                 <p class="help">Nos chasseurs immobiliers peuvent également vous accompagner dans une recherche personnalisée et adaptée à vos besoins. Remplissez le formulaire ci dessous et nous vous contacterons au plus vite.</p>
                 <fieldset class="left">
-                    <input type="text" value="Votre nom" />
-                    <input type="text" value="Votre adresse e-mail" />
-                    <textarea>Décrivez ce que vous recherchez, nous nous occupons du reste</textarea>
+                    <?php echo $assisted_search_form['name'] ?>
+                    <?php echo $assisted_search_form['contact'] ?>
+                    <?php echo $assisted_search_form['message'] ?>
                     <input type="submit" class="submit" value="Envoyer"/>
                 </fieldset>
             </form>

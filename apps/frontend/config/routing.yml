@@ -35,7 +35,11 @@ property_show:
 show_search_panel:
   url: /advanced_search
   param: { module: home, action: index, show_search_panel: true }
-  
+
+send_assisted_search_request:
+  url: /search/assisted
+  param: { module: search, action: sendAssistedSearchRequest }
+
 #full_text_search:
 #  url: /search
 #  param: { module: property, action: fullTextSearch }
