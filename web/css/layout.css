@@ -265,6 +265,11 @@ div.search_form_wrapper.visible
                     margin: 5px 0 0;
                 }
 
+                div.search_form_wrapper div.search_form form fieldset textarea.dimmed
+                {
+                    color: #888;
+                }
+
                 div.search_form_wrapper div.search_form form.assisted_search fieldset input.submit
                 {
                     margin-top: 30px;
@@ -273,6 +278,11 @@ div.search_form_wrapper.visible
                 div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text]
                 {
                     width: 124px;
+                }
+
+                div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text].dimmed
+                {
+                    color: #888;
                 }
 
             div.search_form_wrapper div.search_form form input.submit

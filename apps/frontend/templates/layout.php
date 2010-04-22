@@ -1,3 +1,4 @@
+<?php use_javascript('assisted-search-form') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +91,7 @@
 	            <input type="submit" class="submit" value="Lancer la recherche" />
             </form>
             <?php $assisted_search_form = $sf_user->getAssistedSearchRequest() ?>
-            <form class="assisted_search" method="post" action="<?php echo url_for('@send_assisted_search_request')?>">
+            <form class="assisted_search <?php $assisted_search_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@send_assisted_search_request')?>">
                 <h2>Recherche assistée</h2>
                 <p class="help">Nos chasseurs immobiliers peuvent également vous accompagner dans une recherche personnalisée et adaptée à vos besoins. Remplissez le formulaire ci dessous et nous vous contacterons au plus vite.</p>
                 <fieldset class="left">
