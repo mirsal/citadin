@@ -54,16 +54,16 @@ class PropertyFormFilter extends BasePropertyFormFilter
     $this->widgetSchema['bedrooms']->setOption('template', '<label>min</label> %from% <label>max</label> %to%');
 
     $this->getWidgetSchema()->setLabels(array(
-        'location' => 'Localité',
-        'type' => 'Type de bien',
-        'price' => 'Budget (€)',
-        'surface' => 'Surface (m²)',
-        'rooms' => 'Nombre de pièces',
-        'bedrooms' => 'Nombre de chambres',
-        'balcony' => 'Balcon',
-        'terrace' => 'Terrasse',
-        'cellar' => 'Cave',
-        'attic' => 'Grenier'
+        'location'  => PropertyPeer::getFieldLabel('location'),
+        'type'      => PropertyPeer::getFieldLabel('type'),
+        'price'     => PropertyPeer::getFieldLabel('price'),
+        'surface'   => PropertyPeer::getFieldLabel('surface'),
+        'rooms'     => PropertyPeer::getFieldLabel('rooms'),
+        'bedrooms'  => PropertyPeer::getFieldLabel('bedrooms'),
+        'balcony'   => PropertyPeer::getFieldLabel('balcony'),
+        'terrace'   => PropertyPeer::getFieldLabel('terrace'),
+        'cellar'    => PropertyPeer::getFieldLabel('cellar'),
+        'attic'     => PropertyPeer::getFieldLabel('attic')
     ));
 
     $this->getWidgetSchema()->setNameFormat('property_filters[%s]');

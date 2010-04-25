@@ -4,6 +4,34 @@ class PropertyPeer extends BasePropertyPeer
 {
 	const TYPE_SALE = 'SALE';
 	const TYPE_RENTAL = 'RENTAL';
+
+    protected static $fieldLabels = array(
+        'description' => 'Description',
+        'orientation' => 'Orientation',
+        'location' => 'Localité',
+        'name' => 'Nature du bien',
+        'type' => 'Type de bien',
+        'price' => 'Budget (€)',
+        'surface' => 'Surface (m²)',
+        'rooms' => 'Nombre de pièces',
+        'bedrooms' => 'Nombre de chambres',
+        'balcony' => 'Balcon',
+        'terrace' => 'Terrasse',
+        'cellar' => 'Cave',
+        'attic' => 'Grenier',
+        'garage' => 'Garage',
+        'parking' => 'Parking'
+    );
+
+    public static function getFieldLabels()
+    {
+        return self::$fieldLabels;
+    }
+
+    public static function getFieldLabel($field, $keyType = BasePeer::TYPE_FIELDNAME)
+    {
+        return self::$fieldLabels[self::translateFieldName($field, $keyType, BasePeer::TYPE_FIELDNAME)];
+    }
 	
 	public static function getTypes()
 	{

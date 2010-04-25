@@ -65,9 +65,9 @@
 				</li>
 			</ul>
 			<ul class="attribute-group">
-			<?php foreach($property->getMetadataFields() as $k => $v): ?>
+			<?php foreach($property->getMetadataFields(BasePeer::TYPE_FIELDNAME) as $k => $v): ?>
 				<li>
-					<strong class="attribute-name"><?php echo $k ?></strong>
+					<strong class="attribute-name"><?php echo PropertyPeer::getFieldLabel($k) ?></strong>
 					<span class="attribute-value"><?php echo $v ?></span>
 				</li>
             <?php endforeach;?>
