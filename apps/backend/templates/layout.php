@@ -22,11 +22,9 @@
 			<figure class="logo">Citad'in</figure>
 			<nav><ul>
 				<li class="left"></li>
-				<li><a href="<?php echo url_for('property')?>">Biens</a></li>
-				<li class="separator"></li>
-				<li><a href="<?php echo url_for('homepage')?>">Clients</a></li>
+				<li><a href="<?php echo url_for('property')?>">Gestion du catalogue de biens</a></li>
                 <li class="separator"></li>
-				<li><a href="<?php echo url_for('homepage')?>">Paramètres avancés</a></li>
+				<li><a href="<?php echo url_for('sf_guard_signout')?>">Déconnexion</a></li>
 				<li class="right"></li>
 			</ul></nav>
 		</div>
