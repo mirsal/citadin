@@ -14,10 +14,17 @@ generator:
       actions: ~
       fields:
           created_at: { label: Date d'ajout }
-          name:       { label: Nature du bien }
+          name:       { label: Nature du bien, help: (Exemple: "<strong>T3 Bis</strong>") }
           location:   { label: Localité }
           price:      { label: Prix / Loyer (€) }
           surface:    { label: Surface (m²) }
+          rooms:      { label: Nombre de pièces }
+          bedrooms:   { label: Nombre de chambres }
+          balcony:    { label: Balcon }
+          terrace:    { label: Terrasse }
+          cellar:     { label: Cave }
+          attic:      { label: Grenier }
+
       list:
           title: Liste des biens
           display: [=name, location, type, price, created_at]

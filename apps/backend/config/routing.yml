@@ -4,6 +4,12 @@ render_attachment:
   options: { model: FileAttachment, type: object }
   param: { module: attachment, action: render }
 
+delete_attachment:
+  url: /attachments/:id.png/delete
+  class: sfPropelRoute
+  options: { model: FileAttachment, type: object }
+  param: { module: attachment, action: delete }
+
 property:
   class: sfPropelRouteCollection
   options:

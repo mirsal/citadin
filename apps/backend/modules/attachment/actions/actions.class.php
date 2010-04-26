@@ -30,4 +30,13 @@ class attachmentActions extends sfActions
     $this->renderText(stream_get_contents($attachment->getData()));
     return sfView::NONE;
   }
+
+  public function executeDelete(sfWebRequest $request)
+  {
+    $attachment = $this->getRoute()->getObject();
+    $property = $attachment->getProperty();
+
+    $attachment->delete();
+    $this->redirect($this->generateUrl('property_edit', $property));
+  }
 }

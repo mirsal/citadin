@@ -31,11 +31,11 @@ class PropertyForm extends BasePropertyForm
   
     $this->widgetSchema->setLabels(array(
         'files' => 'Photos',
-        'new_file' => 'Upload a new photo'
+        'new_file' => 'Ajouter une photo'
     ));
     
     $this->widgetSchema->setHelps(array(
-        'files' => 'Click on a photo to remove it'
+        'files' => 'Cliquez sur une photo pour la supprimer'
     ));
   }
   
