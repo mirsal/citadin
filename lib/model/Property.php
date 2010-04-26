@@ -96,15 +96,13 @@ class Property extends BaseProperty
 		 
 		// remove existing entries
 		foreach ($index->find('pk:'.$this->getId()) as $hit)
-		{
 		  $index->delete($hit->id);
-		}
 		
 		// don't index non-activated property
-		if (!$this->isActivated())
+		/*if (!$this->isActivated())
 		{
 		  return;
-		}
+		}*/
 		
 		$doc = new Zend_Search_Lucene_Document();
 		
