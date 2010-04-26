@@ -66,10 +66,12 @@
 			</ul>
 			<ul class="attribute-group">
 			<?php foreach($property->getMetadataFields(BasePeer::TYPE_FIELDNAME) as $k => $v): ?>
+			    <?php if(!is_null($v) and !(is_bool($v) and !$v)): ?>
 				<li>
 					<strong class="attribute-name"><?php echo PropertyPeer::getFieldLabel($k) ?></strong>
-					<span class="attribute-value"><?php echo $v ?></span>
+					<span class="attribute-value"><?php echo is_bool($v) ? 'Oui' : $v ?></span>
 				</li>
+				<?php endif; ?>
             <?php endforeach;?>
 			</ul>
 		</details>
