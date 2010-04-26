@@ -9,6 +9,8 @@ class PropertyFormFilterFrontend extends PropertyFormFilter
             'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Peu importe'))
   	    ));
 
+  	    $this->getWidgetSchema()->setDefault('type', 'TYPE_ANY');
+
         $this->widgetSchema['price']->setOption('template',
             '<label>Min</label> %from% <label>Max</label> %to%');
 
