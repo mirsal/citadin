@@ -10,6 +10,11 @@
         background-color: #eee !important;
     }
 
+    #sf_admin_container tfoot th {
+        padding: 4px 7px;
+        font-size: small;
+    }
+
 	#sf_admin_container h1 {
 		background: #D00 url(../images/shadow.png) no-repeat center 3px;
 		display: block;
