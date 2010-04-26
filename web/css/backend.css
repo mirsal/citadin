@@ -6,6 +6,10 @@
 	overflow: hidden;
 }
 
+    #sf_admin_container th {
+        background-color: #eee !important;
+    }
+
 	#sf_admin_container h1 {
 		background: #D00 url(../images/shadow.png) no-repeat center 3px;
 		display: block;
