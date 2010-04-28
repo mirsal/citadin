@@ -18,6 +18,9 @@
 	<header>
 		<div class="wrapper">
 			<figure class="logo">Citad'in</figure>
+			<?php if($sf_user->hasFlash('notification')): ?>
+			<div class="notification"><?php echo $sf_user->getFlash('notification') ?></div>
+			<?php endif; ?>
 			<nav><ul>
 				<li class="left"></li>
 				<li><a href="<?php echo url_for('homepage')?>">Accueil</a></li>

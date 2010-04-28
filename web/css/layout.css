@@ -25,6 +25,29 @@ header
 		background: url('/images/logo_header.png') no-repeat;
 		text-indent: -9999px;
 	}
+
+	header div.notification
+	{
+	    background: #222;
+	    padding: 10px 15px;
+	    max-width: 600px;
+	    position: absolute;
+        top: 15px;
+	    left: 200px;
+	    color: #f0f0f0;
+	    text-shadow: 1px 1px 4px #000;
+	    border: #333 2px solid;
+
+	    opacity: 0.8;
+
+        box-shadow: 0 0 5px #222;
+	    -moz-box-shadow: 0 0 5px #222;
+	    -webkit-box-shadow: 0 0 5px #222;
+
+	    border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	}
 	
 	header nav
 	{
