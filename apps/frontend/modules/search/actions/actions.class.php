@@ -34,6 +34,13 @@ class searchActions extends sfActions
                     )));
 
                 unset($name);
+                $this->getUser()->setFlash('notification',
+                    sprintf("Nous avons bien reçu votre demande, <br />un e-mail vous a été envoyé à %s, Merci !", $m[0]));
+
+            } else {
+
+                $this->getUser()->setFlash('notification',
+                    sprintf("Nous avons bien reçu votre demande, <br />Merci !", $m[0]));
 
             }
 
