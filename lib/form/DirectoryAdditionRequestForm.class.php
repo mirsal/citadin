@@ -1,5 +1,9 @@
 <?
 class DirectoryAdditionRequestForm extends UserRequestForm
 {
-    $this->getWidgetSchema()->setNameFormat('directory_addition_request[%s]');
+    public function configure()
+    {
+        parent::configure();
+        $this->getWidgetSchema()->setNameFormat('directory_addition_request[%s]');
+    }
 }
