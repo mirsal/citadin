@@ -21,7 +21,5 @@ class UserRequestForm extends sfForm
             'contact' => 'Votre e-mail ou téléphone',
             'message' => 'Décrivez ce que vous recherchez, nous nous occupons du reste'
         ));
-
-        $this->getWidgetSchema()->setNameFormat('assisted_search_request[%s]');
     }
 }
