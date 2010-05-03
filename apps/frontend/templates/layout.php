@@ -1,4 +1,4 @@
-<?php use_javascript('assisted-search-form') ?>
+<?php use_javascript('in-widget-labels') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +94,7 @@
 	            <input type="submit" class="submit" value="Lancer la recherche" />
             </form>
             <?php $assisted_search_form = $sf_user->getAssistedSearchRequest() ?>
-            <form class="assisted_search <?php $assisted_search_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@send_assisted_search_request')?>">
+            <form class="assisted_search in_widget_labels <?php $assisted_search_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@send_assisted_search_request')?>">
                 <h2>Recherche assistée</h2>
                 <p class="help">Nos chasseurs immobiliers peuvent également vous accompagner dans une recherche personnalisée et adaptée à vos besoins. Remplissez le formulaire ci dessous et nous vous contacterons au plus vite.</p>
                 <fieldset class="left">
@@ -109,7 +109,7 @@
     <div class="submit_property_form_wrapper <?php $sf_request->getParameter('show_submit_property_panel') and print('visible')?>">
         <div class="submit_property_form">
             <?php $submit_property_form = $sf_user->getDirectoryAdditionRequest() ?>
-            <form class="submit_property <?php $submit_property_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@submit_property')?>">
+            <form class="submit_property in_widget_labels <?php $submit_property_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@submit_property')?>">
                 <h2>Proposer un bien</h2>
                 <p class="help">Vous souhaitez faire apparaitre votre bien immobilier dans notre catalogue ? Remplissez le formulaire ci-dessous et nous vous contacterons au plus vite</p>
                 <fieldset class="left">

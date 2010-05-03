@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('form.assisted_search.unbound')
+    $('form.in_widget_labels.unbound')
         .find('input[type=text], textarea')
         .click(function(ev) {
 
