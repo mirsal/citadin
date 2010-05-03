@@ -12,7 +12,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
 {
   public function configure()
   {
-    unset($this['created_at']);
+    unset($this['created_at'], $this['is_activated']);
     $this->widgetSchema['name'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     $this->widgetSchema['location'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     $this->widgetSchema['description'] = new sfWidgetFormFilterInput(array('with_empty' => false));
