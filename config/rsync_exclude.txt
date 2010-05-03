@@ -1,4 +1,6 @@
 .svn
+/.git*
+/data/*.index
 /web/uploads/*
 /cache/*
 /log/*
