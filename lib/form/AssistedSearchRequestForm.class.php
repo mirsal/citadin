@@ -1,0 +1,4 @@
+<?
+class AssistedSearchRequestForm extends UserRequestForm
+{
+}

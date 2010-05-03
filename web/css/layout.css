@@ -182,7 +182,8 @@ div.separator
 	height: 12px;
 }
 
-div.search_form_wrapper
+div.search_form_wrapper,
+div.submit_property_form_wrapper
 {
     position: relative;
     width: 960px;
@@ -191,16 +192,28 @@ div.search_form_wrapper
     display: none;
 }
 
-div.search_form_wrapper.visible
+div.search_form_wrapper.visible,
+div.submit_property_form_wrapper.visible
 {
     display: inherit;
 }
 
     div.search_form_wrapper div.search_form
     {
+        top: 0;
+        left: 15px;
+    }
+
+    div.submit_property_form_wrapper div.submit_property_form
+    {
+        top: 0;
+        right: 150px;
+    }
+
+    div.search_form_wrapper div.search_form,
+    div.submit_property_form_wrapper div.submit_property_form
+    {
 	    position: absolute;
-	    top: 0;
-	    left: 15px;
 	    overflow: hidden;
 	    background: #000 /*url('/images/searchform_background.png') no-repeat*/;
         -moz-box-shadow: 0 0 10px #000;
@@ -208,7 +221,8 @@ div.search_form_wrapper.visible
         box-shadow: 0 0 10px #000;
     }
 
-        div.search_form_wrapper div.search_form form
+        div.search_form_wrapper div.search_form form,
+        div.submit_property_form_wrapper div.submit_property_form form
         {
             overflow: hidden;
             float: left;
@@ -228,13 +242,15 @@ div.search_form_wrapper.visible
             background: #202020;
         }
 
-            div.search_form_wrapper div.search_form form h2
+            div.search_form_wrapper div.search_form form h2,
+            div.submit_property_form_wrapper div.submit_property_form form h2
             {
                 color: #FFF;
                 margin: 5px 0 15px 5px;
             }
 
-            div.search_form_wrapper div.search_form form > p.help
+            div.search_form_wrapper div.search_form form > p.help,
+            div.submit_property_form_wrapper div.submit_property_form form > p.help
             {
                 color: #eee;
                 margin: 5px;
@@ -242,7 +258,9 @@ div.search_form_wrapper.visible
             }
 
             div.search_form_wrapper div.search_form form fieldset,
-            div.search_form_wrapper div.search_form form input.submit
+            div.search_form_wrapper div.search_form form input.submit,
+            div.submit_property_form_wrapper div.submit_property_form form fieldset,
+            div.submit_property_form_wrapper div.submit_property_form form input.submit
             {
 	            margin: 5px 10px;
             }
@@ -275,40 +293,47 @@ div.search_form_wrapper.visible
                 }
 
                 div.search_form_wrapper div.search_form form fieldset input,
-                div.search_form_wrapper div.search_form form fieldset select
+                div.search_form_wrapper div.search_form form fieldset select,
+                div.submit_property_form_wrapper div.submit_property_form form fieldset input
                 {
 	                border: 1px #888 outset;
 	                font-size: 11px;
                 }
 
-                div.search_form_wrapper div.search_form form fieldset textarea
+                div.search_form_wrapper div.search_form form fieldset textarea,
+                div.submit_property_form_wrapper div.submit_property_form form fieldset textarea
                 {
                     width: 250px;
                     height: 94px;
                     margin: 5px 0 0;
                 }
 
-                div.search_form_wrapper div.search_form form fieldset textarea.dimmed
+                div.search_form_wrapper div.search_form form fieldset textarea.dimmed,
+                div.submit_property_form_wrapper div.submit_property_form form fieldset textarea.dimmed
                 {
                     color: #888;
                 }
 
-                div.search_form_wrapper div.search_form form.assisted_search fieldset input.submit
+                div.search_form_wrapper div.search_form form.assisted_search fieldset input.submit,
+                div.submit_property_form_wrapper div.submit_property_form form fieldset input.submit
                 {
                     margin-top: 30px;
                 }
 
-                div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text]
+                div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text],
+                div.submit_property_form_wrapper div.submit_property_form form fieldset input[type=text]
                 {
                     width: 124px;
                 }
 
-                div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text].dimmed
+                div.search_form_wrapper div.search_form form.assisted_search fieldset input[type=text].dimmed,
+                div.submit_property_form_wrapper div.submit_property_form form fieldset input[type=text].dimmed
                 {
                     color: #888;
                 }
 
-            div.search_form_wrapper div.search_form form input.submit
+            div.search_form_wrapper div.search_form form input.submit,
+            div.submit_property_form_wrapper div.submit_property_form form input.submit
             {
 	            border: 1px #D66 outset;
 	            color: #CCC;
@@ -321,13 +346,15 @@ div.search_form_wrapper.visible
 	            -webkit-border-radius: 5px;
             }
 
-            div.search_form_wrapper div.search_form form input.submit:hover
+            div.search_form_wrapper div.search_form form input.submit:hover,
+            div.submit_property_form_wrapper div.submit_property_form form input.submit:hover
             {
 	            cursor: pointer;
 	            color: #FFF;
             }
 
-            div.search_form_wrapper div.search_form form input.submit:focus
+            div.search_form_wrapper div.search_form form input.submit:focus,
+            div.submit_property_form_wrapper div.submit_property_form form input.submit:focus
             {
 	            border: 1px #D66 inset;
             }

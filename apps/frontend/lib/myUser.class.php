@@ -21,4 +21,14 @@ class myUser extends sfGuardSecurityUser
 
         return $form;
     }
+
+    public function getDirectoryAdditionRequest()
+    {
+        $form = new DirectoryAdditionRequestForm();
+
+        if($this->hasAttribute('directory_addition_request'))
+            $form->bind($this->getAttribute('directory_addition_request'));
+
+        return $form;
+    }
 }

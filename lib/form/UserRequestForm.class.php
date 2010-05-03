@@ -1,6 +1,6 @@
 <?php
 
-class AssistedSearchRequestForm extends sfForm
+class UserRequestForm extends sfForm
 {
     public function configure()
     {

@@ -11,3 +11,5 @@ all:
     assisted_search_subject: "Nous avons bien reçu votre demande"
     assisted_search_notice_subject: "Y'a un mec qui veut un appart !"
     send_notices_to: { mirsal.ennaime@gmail.com: Mirsal Ennaime }
+    submit_property_subject: "Nous avons bien reçu votre demande"
+    submit_property_notice_subject: "Une demande d'ajout de bien a été déposée"

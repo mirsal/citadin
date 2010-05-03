@@ -1,0 +1,4 @@
+<?
+class DirectoryAdditionRequestForm extends UserRequestForm
+{
+}

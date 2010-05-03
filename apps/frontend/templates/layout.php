@@ -27,7 +27,7 @@
 				<li class="separator"></li>
 				<li><a href="<?php echo url_for('@show_search_panel')?>">Rechercher un bien</a></li>
 				<li class="separator"></li>
-				<li><a href="">Proposer un bien</a><li>
+				<li><a href="<?php echo url_for('@show_submit_property_panel') ?>">Proposer un bien</a><li>
 				<li class="separator"></li>
 				<li><a href="<?php echo url_for('contact') ?>">Qui sommes-nous ?</a></li>
 				<li class="separator"></li>
@@ -101,6 +101,21 @@
                     <?php echo $assisted_search_form['name'] ?>
                     <?php echo $assisted_search_form['contact'] ?>
                     <?php echo $assisted_search_form['message'] ?>
+                    <input type="submit" class="submit" value="Envoyer"/>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="submit_property_form_wrapper <?php $sf_request->getParameter('show_submit_property_panel') and print('visible')?>">
+        <div class="submit_property_form">
+            <?php $submit_property_form = $sf_user->getDirectoryAdditionRequest() ?>
+            <form class="submit_property <?php $submit_property_form->isBound() or print('unbound')?>" method="post" action="<?php echo url_for('@submit_property')?>">
+                <h2>Proposer un bien</h2>
+                <p class="help">Vous souhaitez faire apparaitre votre bien immobilier dans notre catalogue ? Remplissez le formulaire ci-dessous et nous vous contacterons au plus vite</p>
+                <fieldset class="left">
+                    <?php echo $submit_property_form['name'] ?>
+                    <?php echo $submit_property_form['contact'] ?>
+                    <?php echo $submit_property_form['message'] ?>
                     <input type="submit" class="submit" value="Envoyer"/>
                 </fieldset>
             </form>

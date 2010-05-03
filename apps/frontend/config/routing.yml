@@ -36,9 +36,17 @@ show_search_panel:
   url: /advanced_search
   param: { module: home, action: index, show_search_panel: true }
 
+show_submit_property_panel:
+  url: /submit_property
+  param: { module: home, action: index, show_submit_property_panel: true }
+
 send_assisted_search_request:
   url: /search/assisted
   param: { module: search, action: sendAssistedSearchRequest }
+
+submit_property:
+  url: /property/submit
+  param: { module: property, action: submit }
 
 #full_text_search:
 #  url: /search
