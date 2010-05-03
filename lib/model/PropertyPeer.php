@@ -20,7 +20,8 @@ class PropertyPeer extends BasePropertyPeer
         'cellar' => 'Cave',
         'attic' => 'Grenier',
         'garage' => 'Garage',
-        'parking' => 'Parking'
+        'parking' => 'Parking',
+        'is_activated' => 'Disponible'
     );
 
     public static function getFieldLabels()
