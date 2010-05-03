@@ -19,7 +19,7 @@ class UserRequestForm extends sfForm
         $this->getWidgetSchema()->setDefaults(array(
             'name' => 'Votre nom',
             'contact' => 'Votre e-mail ou téléphone',
-            'message' => 'Décrivez ce que vous recherchez, nous nous occupons du reste'
+            'message' => 'Votre message'
         ));
     }
 }
