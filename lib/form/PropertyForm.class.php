@@ -37,6 +37,8 @@ class PropertyForm extends BasePropertyForm
     $this->widgetSchema->setHelps(array(
         'files' => 'Cliquez sur une photo pour la supprimer'
     ));
+
+    $this->widgetSchema['is_activated']->setDefault(true);
   }
   
   public function save($con = null)
