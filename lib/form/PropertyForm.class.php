@@ -31,7 +31,8 @@ class PropertyForm extends BasePropertyForm
   
     $this->widgetSchema->setLabels(array(
         'files' => 'Photos',
-        'new_file' => 'Ajouter une photo'
+        'new_file' => 'Ajouter une photo',
+        'is_activated' => 'Disponible'
     ));
     
     $this->widgetSchema->setHelps(array(
