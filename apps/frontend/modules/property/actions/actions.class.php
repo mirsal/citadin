@@ -171,8 +171,8 @@ class propertyActions extends sfActions
         $this->redirect($this->generateUrl('homepage', array('reset_filters' => true)));
     }
 
-    $this->redirect($this->generateUrl('homepage'), array(
+    $this->redirect($this->generateUrl('homepage', array(
         'show_submit_property_panel' => true
-    ));
+    )));
   }
 }
