@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('form.in_widget_labels.unbound')
         .find('input[type=text], textarea')
-        .click(function(ev) {
+        .focus(function(ev) {
 
             var _default = $(this).attr('value') ? $(this).attr('value') : $(this).text();
             
