@@ -6,7 +6,7 @@ class PropertyFormFilterFrontend extends PropertyFormFilter
     {
         parent::configure();
         $this->widgetSchema['type'] = new sfWidgetFormSelect(array(
-            'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Peu importe'))
+            'choices' => array_merge(PropertyPeer::getTypes(), array('TYPE_ANY' => 'Tous'))
         ));
 
         $this->getWidgetSchema()->setDefault('type', 'TYPE_ANY');

@@ -50,7 +50,7 @@
             <form class="manual_search" method="post" action="<?php echo url_for('property_index', array('reset_filters' => true))?>">
             <h2>Recherche Manuelle</h2>
 	            <fieldset class="left">
-		            <label>Type de Bien</label>
+		            <label>Sélectionner</label>
                     <?php echo $manual_search_form['type']->render() ?>
 	            </fieldset>
 
