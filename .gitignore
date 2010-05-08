@@ -3,6 +3,7 @@
 /cache/*
 /log/*
 data/sql/
+/data/*.index/
 *~
 lib/form/base
 lib/filter/base
