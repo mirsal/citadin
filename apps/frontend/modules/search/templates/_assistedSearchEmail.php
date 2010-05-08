@@ -1,9 +1,13 @@
 Bonjour <?php echo $first_name ?>,
 
-Nous avons bien reçu la demande suivante:
+Nous avons bien pris en compte votre demande.
+Notre equipe vous contactera dans les plus bref délais.
+
+A bientôt.
+
+Votre chasseur immobilier
+
+--
+Message original:
 
 <?php echo $message ?>
-
-
-Nous vous contacterons d'ici peu.
-l'équipe citad'in
