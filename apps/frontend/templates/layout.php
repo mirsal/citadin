@@ -17,8 +17,10 @@
 <body>
 	<header>
 		<div class="wrapper">
-			<figure class="logo">Citad'in</figure>
-			<?php if($sf_user->hasFlash('notification')): ?>
+			<a href="<?php echo url_for('homepage')?>" title="Citad'in">
+				<figure class="logo">Citad'in</figure>
+			</a>			
+    		<?php if($sf_user->hasFlash('notification')): ?>
 			<div class="notification"><?php echo $sf_user->getFlash('notification') ?></div>
 			<?php endif; ?>
 			<nav><ul>
