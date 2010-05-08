@@ -102,21 +102,24 @@ div.banner
 			    background: #CCC;
 			    color: #333;
 			    left: 30px;
-			    width: 450px;
+			    width: 666px;
 		}
 			    
 		    div.banner div.content div.text
 		    {
 			    padding: 20px;
-			    font-size: x-small;
+			    font-size: small;
+			    position: relative;
+			    z-index: 10;
+			    line-height: 20px;
 			    text-align: justify;
 		    }
 		    
 		    div.banner div.content div.triangle
 		    {
 			    background: url('/images/triangle.png') no-repeat;
-			    top: 50px;
-			    right: -60px;
+			    top: 27px;
+			    right: -35px;
 			    width: 60px;
 			    height: 110px;
 			    position: absolute;

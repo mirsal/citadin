@@ -28,7 +28,7 @@
 			
 			
 			<div class="figure">
-				<?php echo image_tag('figure.png', array('alt' => 'Fanny YANIKIAN', 'title' => 'Fanny YANIKIAN', 'width' => '100%', 'height' => '100%')) ?>
+				<?php //echo image_tag('figure.png', array('alt' => 'Fanny YANIKIAN', 'title' => 'Fanny YANIKIAN', 'width' => '100%', 'height' => '100%')) ?>
 			</div>
 		
 		</div>
