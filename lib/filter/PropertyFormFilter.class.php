@@ -63,6 +63,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
 
     $this->getWidgetSchema()->setLabels(array(
         'location'  => PropertyPeer::getFieldLabel('location'),
+        'category'  => PropertyPeer::getFieldLabel('category'),
         'type'      => PropertyPeer::getFieldLabel('type'),
         'price'     => PropertyPeer::getFieldLabel('price'),
         'surface'   => PropertyPeer::getFieldLabel('surface'),

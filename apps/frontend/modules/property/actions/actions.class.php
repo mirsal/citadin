@@ -46,7 +46,7 @@ class propertyActions extends sfActions
     if($request->hasParameter('page'))
         $pager->setPage($request->getParameter('page'));
 
-    $default_fields = array('type', 'location', 'surface', 'price', 'rooms', 'bedrooms');
+    $default_fields = array('type', 'location', 'surface', 'price', 'rooms', 'category');
     $visible_fields = $request->getParameter('reset_filters') ?
         $default_fields : $this->getUser()->getAttribute('visible_filters', $default_fields);
 
