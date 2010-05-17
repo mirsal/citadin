@@ -11,6 +11,7 @@ class PropertyPeer extends BasePropertyPeer
         'location' => 'Localité',
         'name' => 'Nature du bien',
         'type' => 'Type de bien',
+        'category' => 'Catégorie',
         'price' => 'Budget (€)',
         'surface' => 'Surface (m²)',
         'rooms' => 'Nombre de pièces',

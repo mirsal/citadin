@@ -62,16 +62,13 @@
 	            </fieldset>
 
 	            <fieldset class="topspace left">
-	                <h4>Nombre de pièces</h4>
-                    <?php echo $manual_search_form['rooms']->render(array(
-                        'from' => array('size' => 4),
-                        'to' => array('size' => 4)
-                    )) ?>
+	                <h4>Type de bien</h4>
+                    <?php echo $manual_search_form['category']->render(array('class' => 'fullwidth')) ?>
 	            </fieldset>
 
 	            <fieldset class="topspace right">
-	                <h4>Nombre de chambres</h4>
-                    <?php echo $manual_search_form['bedrooms']->render(array(
+	                <h4>Nombre de pièces</h4>
+                    <?php echo $manual_search_form['rooms']->render(array(
                         'from' => array('size' => 4),
                         'to' => array('size' => 4)
                     )) ?>

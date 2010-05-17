@@ -27,10 +27,18 @@ class PropertyFormFilter extends BasePropertyFormFilter
             array('ORIENTATION_ANY' => 'Peu importe'),
   		    $orientations ? array_combine($orientations, $orientations) : array())
   	));
+
+    $categories = PropertyPeer::getAllValuesForColumn(PropertyPeer::CATEGORY);
+    $this->widgetSchema['category'] = new sfWidgetFormSelect(array(
+        'choices' => array_merge(
+            array('CATEGORY_ANY' => 'Peu importe'),
+            $categories ? array_combine($categories, $categories) : array())
+    ));
   	
   	$this->getWidgetSchema()->setDefault('type', 'TYPE_ANY');
   	$this->getWidgetSchema()->setDefault('orientation', 'ORIENTATION_ANY');
-  	
+    $this->getWidgetSchema()->setDefault('category', 'CATEGORY_ANY');
+
   	$this->validatorSchema['type'] = new sfValidatorAnd(array(
   		$this->validatorSchema['type'],
   		new sfValidatorChoice(array(
@@ -92,6 +100,14 @@ class PropertyFormFilter extends BasePropertyFormFilter
     if($value === 'ORIENTATION_ANY')
         return false;
     
+    return array('text' => $value);
+  }
+
+  public function convertCategoryValue($value)
+  {
+    if($value === 'CATEGORY_ANY')
+        return false;
+
     return array('text' => $value);
   }
   
