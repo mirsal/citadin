@@ -28,7 +28,7 @@ generator:
 
       list:
           title: Liste des biens
-          display: [=name, location, type, price, created_at]
+          display: [=name, category, location, type, price, created_at]
       filter:  ~
       form:    ~
       edit:
