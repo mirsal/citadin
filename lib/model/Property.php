@@ -61,6 +61,11 @@ class Property extends BaseProperty
 		return $this->getIsActivated();
 	}
 	
+	public function getHumanReadableType()
+	{
+        return array_search($this->getType(), array_flip(PropertyPeer::getTypes()));
+	}
+
 	public function save(PropelPDO $con = null)
 	{
 		$con = $con ? $con : $this->getPeer()->getConnection();

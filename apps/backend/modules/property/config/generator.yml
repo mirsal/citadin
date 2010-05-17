@@ -28,7 +28,9 @@ generator:
 
       list:
           title: Liste des biens
-          display: [=name, category, location, type, price, created_at]
+          display: [=name, category, location, humanReadableType, price, created_at]
+          fields:
+            humanReadableType: { label: Type }
       filter:  ~
       form:    ~
       edit:
