@@ -15,7 +15,8 @@ generator:
       fields:
           created_at: { label: Date d'ajout }
           name:       { label: Nature du bien, help: (Exemple: "<strong>T3 Bis</strong>") }
-          location:   { label: Localité }
+          category:   { label: Catégorie, help: (Exemple: "<strong>Appartement</strong>") }
+          location:   { label: Localité, help: (Exemple: "<strong>69100 Villeurbanne Charpennes</strong>") }
           price:      { label: Prix / Loyer (€) }
           surface:    { label: Surface (m²) }
           rooms:      { label: Nombre de pièces }
