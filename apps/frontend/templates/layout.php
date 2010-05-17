@@ -62,7 +62,7 @@
 	            </fieldset>
 
 	            <fieldset class="topspace left">
-	                <h4>Type de bien</h4>
+	                <h4>Catégorie</h4>
                     <?php echo $manual_search_form['category']->render(array('class' => 'fullwidth')) ?>
 	            </fieldset>
 
