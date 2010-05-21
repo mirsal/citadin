@@ -1,6 +1,7 @@
 <?php use_stylesheet('property_list')?>
 <div class="property-filters-container">
 	<form class="filter" method="post" action="<?php echo url_for('@property_index')?>">
+	    <?php echo $filters->renderGlobalErrors() ?>
         <ul class="filters">
 	    <?php foreach($filters as $filter_name => $filter): ?>
 		    <li class="<?php !in_array($filter_name, $sf_user->getAttribute('visible_filters', array())) and print('hidden')?>">
@@ -8,6 +9,7 @@
 		            <span class="name"><?php echo $filter->renderLabel() ?></span>
                     <?php echo str_replace('<br />', '', $filter->render()) ?>
                     <a class="delete-filter" href="<?php echo(url_for('remove_property_filter', array('filter' => $filter_name))) ?>">Supprimer ce filtre</a>
+                    <?php echo $filter->renderError() ?>
                 </fieldset>
 		    </li>
 		<?php endforeach; ?>
