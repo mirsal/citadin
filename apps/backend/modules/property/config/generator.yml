@@ -17,7 +17,7 @@ generator:
           name:       { label: Nature du bien, help: (Exemple: "<strong>T3 Bis</strong>") }
           category:   { label: Catégorie, help: (Exemple: "<strong>Appartement</strong>") }
           location:   { label: Localité, help: (Exemple: "<strong>69100 Villeurbanne Charpennes</strong>") }
-          price:      { label: Prix / Loyer (€) }
+          price:      { label: Prix / Loyer (€), help: Loyer charges comprises ou prix de vente }
           surface:    { label: Surface (m²) }
           rooms:      { label: Nombre de pièces }
           bedrooms:   { label: Nombre de chambres }
