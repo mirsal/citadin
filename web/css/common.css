@@ -23,6 +23,7 @@ div.property-list
 		float: left;
 		margin: 5px;
 		width: 160px;
+        height: 120px;
 		overflow: hidden;
 		border-radius: 8px;
 		-moz-border-radius: 8px;
