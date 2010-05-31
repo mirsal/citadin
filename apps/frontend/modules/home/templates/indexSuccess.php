@@ -1,8 +1,17 @@
 <?php use_stylesheet('homepage') ?>
+<?php use_javascript('home-slideshow') ?>
 <div class="home-page container">
 	<div class="banner">
 		<div class="shadow_left"></div>
-		<div class="content"><span class="slogan">Une nouvelle façon d’aborder l’immobilier</span></div>
+		<div class="content">
+		    <ol class="slideshow">
+                <li><?php echo image_tag('home_ss_01.jpg') ?></li>
+                <li><?php echo image_tag('home_ss_02.jpg') ?></li>
+                <li><?php echo image_tag('home_ss_03.jpg') ?></li>
+                <li><?php echo image_tag('home_ss_04.jpg') ?></li>
+            </ol>
+		    <span class="slogan">Une nouvelle façon d’aborder l’immobilier</span>
+		</div>
     	<div class="shadow_right"></div>
     </div>
     <div class="sub_content">

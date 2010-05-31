@@ -29,10 +29,24 @@ div.banner
 	
 	div.banner div.content
 	{
-		background: url('/images/background.jpg') no-repeat;
 		width: 901px;
 		position: relative;
 	}
+
+        div.banner div.content ol.slideshow
+        {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0; left: 0;
+            list-style: none;
+        }
+
+            div.banner div.content ol.slideshow > li
+            {
+                position: absolute;
+                top: 0; left: 0;
+            }
 	
 		div.banner div.content div.contact
 		{
@@ -138,6 +152,8 @@ div.banner
 	        margin: 260px 10px 0 30px;
 	        text-shadow: 1px 1px 10px #000;
 	        display: block;
+	        position: relative;
+	        z-index: 5;
 	    }
 
 /* Sub Content */
