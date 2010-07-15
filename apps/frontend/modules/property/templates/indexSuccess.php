@@ -67,6 +67,7 @@
                     <div class="mask">
                         <?php $img = $property->getRandomFileAttachment() ?>
                         <img src="<?php if(!is_null($img)) echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_MEDIUM))?>" />
+                        <div class="overlay"></div>
                     </div>
                 </a>
             </figure>

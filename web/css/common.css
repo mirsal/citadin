@@ -39,6 +39,7 @@ div.property-list
 		div.property-list article figure.thumbnail
 		{
 			float: left;
+			position: relative;
 			width: 69px;
 			height: 69px;
 			background: url('/images/background_thumb.png') no-repeat;
@@ -52,6 +53,26 @@ div.property-list
 		        height: 65px;
 		        margin: 2px;
             }
+
+        div.property-list article figure.thumbnail .overlay
+        {
+            position: absolute;
+            background: top left no-repeat;
+            width: 69px;
+            height: 69px;
+            top: 0;
+            left: 0;
+        }
+
+        div.property-list article.rental figure.thumbnail .overlay
+        {
+            background-image: url('../images/rental.png');
+        }
+
+        div.property-list article.sale figure.thumbnail .overlay
+        {
+            background-image: url('../images/sale.png');
+        }
 
 		div.property-list article h3
 		{
