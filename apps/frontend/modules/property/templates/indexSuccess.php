@@ -1,4 +1,9 @@
 <?php use_stylesheet('property_list')?>
+
+<?php slot('head') ?>
+<link rel="canonical" href="<?php echo url_for('property_index') ?>" />
+<?php end_slot() ?>
+
 <div class="property-filters-container">
 	<form class="filter" method="post" action="<?php echo url_for('@property_index')?>">
 	    <?php echo $filters->renderGlobalErrors() ?>
@@ -8,7 +13,7 @@
 		        <fieldset class="filter">
 		            <span class="name"><?php echo $filter->renderLabel() ?></span>
                     <?php echo str_replace('<br />', '', $filter->render()) ?>
-                    <a class="delete-filter" href="<?php echo(url_for('remove_property_filter', array('filter' => $filter_name))) ?>">Supprimer ce filtre</a>
+                    <a class="delete-filter" href="<?php echo(url_for('remove_property_filter', array('filter' => $filter_name))) ?>">Supprimer ce critère</a>
                     <?php echo $filter->renderError() ?>
                 </fieldset>
 		    </li>
@@ -17,7 +22,7 @@
             <li>
                 <fieldset class="filter">
                     <span class="name">&nbsp;</span>
-                    <a class="add-filter" href="<?php echo url_for('property_index', array('show_add_filter_form' => true)) ?>">Ajouter un filtre</a>
+                    <a class="add-filter" href="<?php echo url_for('property_index', array('show_add_filter_form' => true)) ?>">Ajouter un critère</a>
                 <?php if(count($sf_user->getAttribute('visible_filters', array()))): ?>
                     <input type="submit" value="Rechercher"/>
                 <?php endif; ?>
@@ -29,7 +34,7 @@
 	<span class="help">
         <?php if($sf_request->getParameter('show_add_filter_form')): ?>
         <?php $add_filter_form = new AddPropertyFilterForm() ?>
-        Choisissez le filtre à ajouter:
+        Choisissez le critère à ajouter:
         <form class="add_filter" action="<?php echo url_for('@add_property_filter') ?>" method="post">
             <?php echo $add_filter_form['filter'] ?>
             <input type="submit" value="Ajouter">

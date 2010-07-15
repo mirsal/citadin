@@ -9,6 +9,10 @@ contact:
   param: { module: contact, action: index }
 
 property_index:
+  url: /catalogue
+  param: { module: property, action: index }
+
+property_index_noseo:
   url: /property
   param: { module: property, action: index }
 
