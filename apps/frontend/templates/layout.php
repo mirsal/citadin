@@ -7,6 +7,9 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
+    <?php if(has_slot('head')): ?>
+        <?php include_slot('head') ?>
+    <?php endif; ?>
 
 <!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->

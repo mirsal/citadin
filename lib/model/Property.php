@@ -6,7 +6,23 @@ class Property extends BaseProperty
 	{
 		return $this->getName();
 	}
-	
+
+    public function getSlug()
+    {
+        $slug = sprintf('%s %s', (string) $this, $this->getLocation());
+
+        $slug = preg_replace('~[^\\pL\d]+~u', '-', $slug);
+        $slug = trim($slug, '-');
+
+        if (function_exists('iconv'))
+            $slug = iconv('utf-8', 'us-ascii//TRANSLIT', $slug);
+
+        $slug = strtolower($slug);
+        $slug = preg_replace('~[^-\w]+~', '', $slug);
+
+        return $slug;
+    }
+
 	public function getSpecialFields($keyType = BasePeer::TYPE_PHPNAME)
 	{
 		return array(

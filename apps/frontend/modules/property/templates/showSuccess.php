@@ -1,4 +1,9 @@
 <?php use_stylesheet('property_details')?>
+
+<?php slot('head') ?>
+<link rel="canonical" href="<?php echo url_for('property_show', $property) ?>" />
+<?php end_slot() ?>
+
 <div class="property-details container">
 	<div class="left">
 		<section class="gallery">

@@ -25,6 +25,14 @@ update_property_page_length:
   param: { module: property, action: updatePageLength }
 
 property_show:
+  url: /catalogue/:id/:slug
+  class: sfPropelRoute
+  options: { model: Property, type: object }
+  param: { module: property, action: show }
+  requirements:
+    id: \d+
+
+property_show_noseo:
   url: /property/:id
   class: sfPropelRoute
   options: { model: Property, type: object }
