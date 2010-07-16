@@ -29,6 +29,7 @@ div.property-list
 		-moz-border-radius: 8px;
 		-webkit-border-radius: 8px;
 		padding: 8px;
+		color: #555;
 	}
 	
 	div.property-list article:hover
@@ -97,13 +98,3 @@ div.property-list
 		{
 			font-size: 10px;	
 		}
-		
-	div.property-list article.rental
-	{
-		color: #555;
-	}
-	
-	div.property-list article.sale
-	{
-		color: #D00;	
-	}
