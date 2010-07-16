@@ -83,10 +83,20 @@ div.property-details
 
 			div.property-details.rental section.gallery figure.pic .overlay
 			{
-                background-image: url('../images/rental.png');
+                background-image: url('../images/rented.png');
 			}
 
 			div.property-details.sale section.gallery figure.pic .overlay
+			{
+                background-image: url('../images/sold.png');
+			}
+
+			div.property-details.available.rental section.gallery figure.pic .overlay
+			{
+                background-image: url('../images/rental.png');
+			}
+
+			div.property-details.available.sale section.gallery figure.pic .overlay
 			{
                 background-image: url('../images/sale.png');
 			}

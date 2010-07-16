@@ -22,7 +22,8 @@ class PropertyPeer extends BasePropertyPeer
         'attic' => 'Grenier',
         'garage' => 'Garage',
         'parking' => 'Parking',
-        'is_activated' => 'Disponible'
+        'available' => 'Disponible',
+        'visible' => 'Visible'
     );
 
     public static function getFieldLabels()
@@ -54,7 +55,14 @@ class PropertyPeer extends BasePropertyPeer
 	    
 	    return $values;
 	}
-	
+
+    public static function getVisiblePropertiesCriteria(Criteria $criteria = null)
+    {
+        $c = is_null($criteria) ? new Criteria() : clone $criteria;
+        $c->add(self::VISIBLE, true);
+        return $c;
+    }
+
 	public static function getLastPropertiesCriteria($limit, Criteria $criteria = null)
 	{
         $c = is_null($criteria) ? new Criteria() : clone $criteria;
@@ -63,7 +71,7 @@ class PropertyPeer extends BasePropertyPeer
             $c->setLimit($limit);
 
         $c->addDescendingOrderByColumn(self::CREATED_AT);
-        return $c;
+        return self::getVisiblePropertiesCriteria($c);
 	}
 
 	public static function getLastProperties($limit, Criteria $c = null)

@@ -67,10 +67,20 @@ div.property-list
 
         div.property-list article.rental figure.thumbnail .overlay
         {
-            background-image: url('../images/rental.png');
+            background-image: url('../images/rented.png');
         }
 
         div.property-list article.sale figure.thumbnail .overlay
+        {
+            background-image: url('../images/sold.png');
+        }
+
+        div.property-list article.available.rental figure.thumbnail .overlay
+        {
+            background-image: url('../images/rental.png');
+        }
+
+        div.property-list article.available.sale figure.thumbnail .overlay
         {
             background-image: url('../images/sale.png');
         }

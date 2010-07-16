@@ -3,6 +3,8 @@ propel:
     _attributes:  { phpName: Property }
     id:
     created_at:
+    available:    { type: boolean, required: true, default: true }
+    visible:      { type: boolean, required: true, default: true }
     name:         { type: varchar(128), required: true }
     location:     { type: varchar(255), required: true }
     type:         { type: varchar(64), required: true }
@@ -19,7 +21,6 @@ propel:
     terrace:      { type: boolean }
     cellar:       { type: boolean }
     attic:        { type: boolean }
-    is_activated: { type: boolean }
 
   file_attachment:
     _attributes: { phpName: FileAttachment }

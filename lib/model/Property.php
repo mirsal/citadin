@@ -33,7 +33,8 @@ class Property extends BaseProperty
 			PropertyPeer::translateFieldName(PropertyPeer::LOCATION, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::PRICE, BasePeer::TYPE_COLNAME, $keyType),
 			PropertyPeer::translateFieldName(PropertyPeer::TYPE, BasePeer::TYPE_COLNAME, $keyType),
-			PropertyPeer::translateFieldName(PropertyPeer::IS_ACTIVATED, BasePeer::TYPE_COLNAME, $keyType)
+			PropertyPeer::translateFieldName(PropertyPeer::AVAILABLE, BasePeer::TYPE_COLNAME, $keyType),
+			PropertyPeer::translateFieldName(PropertyPeer::VISIBLE, BasePeer::TYPE_COLNAME, $keyType),
 		);
 	}
 	
@@ -64,7 +65,7 @@ class Property extends BaseProperty
 	    $ct->addAnd($c->getNewCriterion(PropertyPeer::ID, $this->getId(), Criteria::NOT_IN));
 
 	    $c->add($ct);
-	    return $c;
+	    return PropertyPeer::getVisiblePropertiesCriteria($c);
 	}
 
 	public function getSimilarProperties(Criteria $c = null,  PropelPDO $con = null)
@@ -72,9 +73,9 @@ class Property extends BaseProperty
 	    return PropertyPeer::doSelect($this->getSimilarPropertiesCriteria($c), $con);
 	}
 	
-	public function isActivated()
+	public function isAvailable()
 	{
-		return $this->getIsActivated();
+		return $this->getAvailable();
 	}
 	
 	public function getHumanReadableType()

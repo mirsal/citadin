@@ -4,7 +4,7 @@
 <link rel="canonical" href="<?php echo url_for('property_show', $property) ?>" />
 <?php end_slot() ?>
 
-<div class="property-details container <?php echo $property->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>">
+<div class="property-details container <?php echo $property->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?> <?php $property->isAvailable() and print('available')?>">
 	<div class="left">
 		<section class="gallery">
 			<ul class="thumbnails">

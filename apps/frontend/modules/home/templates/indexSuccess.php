@@ -18,7 +18,8 @@
     	<div class="property-list wrapper">
 	    	<h2>Derniers Ajouts</h2>
             <?php foreach(PropertyPeer::getLastProperties(sfConfig::get('app_homepage_recently_added_limit', 10)) as $p): ?>
-                <article class="<?php echo $p->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>">
+                <article class="<?php echo $p->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>
+                                <?php $p->isAvailable() and print('available') ?>">
                     <figure class="thumbnail">
                         <a href="<?php echo url_for('property_show', $p) ?>">
                             <div class="mask">

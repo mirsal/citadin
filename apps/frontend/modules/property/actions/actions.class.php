@@ -41,7 +41,7 @@ class propertyActions extends sfActions
         $this->getUser()->getAttribute('page_length',
             sfConfig::get('app_search_default_page_length', 12)));
 
-    $pager->setCriteria($c);
+    $pager->setCriteria(PropertyPeer::getVisiblePropertiesCriteria($c));
 
     if($request->hasParameter('page'))
         $pager->setPage($request->getParameter('page'));

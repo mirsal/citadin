@@ -30,18 +30,20 @@ class PropertyForm extends BasePropertyForm
   	$this->validatorSchema['new_file'] = new sfValidatorFile(array('required' => false));
   
     $this->widgetSchema->setLabels(array(
-        'files' => 'Photos',
-        'new_file' => 'Ajouter une photo',
-        'is_activated' => 'Disponible'
+        'files'     => 'Photos',
+        'new_file'  => 'Ajouter une photo',
+        'available' => 'Disponible'
     ));
     
     $this->widgetSchema->setHelps(array(
         'files' => 'Cliquez sur une photo pour la supprimer'
     ));
 
-    $this->widgetSchema['is_activated']->setDefault(true);
+    $this->getWidgetSchema()->moveField('available', sfWidgetFormSchema::AFTER, 'type');
+    $this->getWidgetSchema()->moveField('visible',   sfWidgetFormSchema::AFTER, 'available');
+
   }
-  
+
   public function save($con = null)
   {
     $ret = parent::save();
