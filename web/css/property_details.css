@@ -65,9 +65,30 @@ div.property-details
 			{
 				display: block;
 				overflow: hidden;
+				position: relative;
 				height: 312px;
 				margin: 2px;
 				background: #aaa;
+			}
+
+            div.property-details section.gallery figure.pic .overlay
+            {
+                position: absolute;
+                background: top left no-repeat;
+                width: 69px;
+                height: 69px;
+                top: 0;
+                left: 0;
+            }
+
+			div.property-details.rental section.gallery figure.pic .overlay
+			{
+                background-image: url('../images/rental.png');
+			}
+
+			div.property-details.sale section.gallery figure.pic .overlay
+			{
+                background-image: url('../images/sale.png');
 			}
 
 			div.property-details section.gallery figure.pic hgroup

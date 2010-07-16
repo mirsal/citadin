@@ -4,7 +4,7 @@
 <link rel="canonical" href="<?php echo url_for('property_show', $property) ?>" />
 <?php end_slot() ?>
 
-<div class="property-details container">
+<div class="property-details container <?php echo $property->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>">
 	<div class="left">
 		<section class="gallery">
 			<ul class="thumbnails">
@@ -24,6 +24,7 @@
 				<div class="mask">
 				    <?php $img = isset($image) ? $image : $property->getRandomFileAttachment() ?>
 					<img src="<?php if(!is_null($img)) echo url_for('render_attachment', array('sf_subject' => $img, 'thumbnail' => FileAttachmentPeer::SIZE_BIG))?>" />
+					<div class="overlay"></div>
 				</div>
 				<hgroup>
 					<?php echo sprintf('%d €', $property->getPrice())?> - 
