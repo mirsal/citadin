@@ -12,7 +12,7 @@ class PropertyFormFilter extends BasePropertyFormFilter
 {
   public function configure()
   {
-    unset($this['created_at'], $this['is_activated']);
+    unset($this['created_at'], $this['visible']);
     $this->widgetSchema['name'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     $this->widgetSchema['location'] = new sfWidgetFormFilterInput(array('with_empty' => false));
     $this->widgetSchema['description'] = new sfWidgetFormFilterInput(array('with_empty' => false));
@@ -72,7 +72,8 @@ class PropertyFormFilter extends BasePropertyFormFilter
         'balcony'   => PropertyPeer::getFieldLabel('balcony'),
         'terrace'   => PropertyPeer::getFieldLabel('terrace'),
         'cellar'    => PropertyPeer::getFieldLabel('cellar'),
-        'attic'     => PropertyPeer::getFieldLabel('attic')
+        'attic'     => PropertyPeer::getFieldLabel('attic'),
+        'available' => PropertyPeer::getFieldLabel('available')
     ));
 
     $this->getWidgetSchema()->setNameFormat('property_filters[%s]');
