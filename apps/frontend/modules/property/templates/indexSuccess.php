@@ -61,7 +61,7 @@
     <hr />
 	<div class="property-list wrapper">
 	<?php foreach ($pager->getResults() as $property): ?>
-	    <article class="rental">
+	    <article class="<?php echo $property->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>">
             <figure class="thumbnail">
                 <a href="<?php echo url_for('property_show', $property)?>">
                     <div class="mask">
