@@ -76,10 +76,18 @@ update_wc() {
 	(cd $GIT_WORK_TREE
 	php symfony cache:clear)
 
-        #Clear the symfony cache
+        #Run database migrations
 	echo "Running database migrations" >&2
 	(cd $GIT_WORK_TREE
 	php symfony propel:migrate frontend)
+
+        #Rebuild the model forms and filters
+	echo "Regenerating orm classes" >&2
+	(cd $GIT_WORK_TREE
+	php symfony propel:build-model
+        php symfony propel:build-forms
+        php symfony propel:build-filters
+        php symfony cache:clear) #clear the cache again in case new classes are added
 }
 
 if [ "$is_bare" = "false" ]
