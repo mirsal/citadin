@@ -79,7 +79,7 @@ update_wc() {
         #Clear the symfony cache
 	echo "Running database migrations" >&2
 	(cd $GIT_WORK_TREE
-	php symfony propel:migrate)
+	php symfony propel:migrate frontend)
 }
 
 if [ "$is_bare" = "false" ]
