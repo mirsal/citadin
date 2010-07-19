@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Announcement
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Announcement
+    plural:                Announcements
+    route_prefix:          announcement
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _new: { label: Ajouter une annonce }
+      fields:
+        created_at: { label: Date }
+        text: { label: Texte }
+      list:
+        title: Liste des annonces
+        display: [created_at, =text]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editer une annonce
+      new:
+        title: Ajouter une annonce

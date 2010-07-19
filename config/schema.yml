@@ -32,6 +32,12 @@ propel:
     size: integer
     data: blob
 
+  announcement:
+    _attributes: { phpName: Announcement }
+    id:
+    created_at:
+    text: { type: varchar(128), required: true }
+
   customer:
     _attributes:  { phpName: Customer }
     user_id:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }

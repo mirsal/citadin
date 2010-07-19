@@ -24,6 +24,8 @@
 				<li class="left"></li>
 				<li><a href="<?php echo url_for('property')?>">Gestion du catalogue de biens</a></li>
                 <li class="separator"></li>
+				<li><a href="<?php echo url_for('announcement')?>">Annonces</a></li>
+                <li class="separator"></li>
 				<li><a href="<?php echo url_for('sf_guard_signout')?>">Déconnexion</a></li>
 				<li class="right"></li>
 			</ul></nav>

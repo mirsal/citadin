@@ -1,5 +1,9 @@
 <?php use_stylesheet('homepage') ?>
 <?php use_javascript('home-slideshow') ?>
+
+<?php use_javascript('jquery.scrollTo.js') ?>
+<?php use_javascript('home-telex') ?>
+
 <div class="home-page container">
 	<div class="banner">
 		<div class="shadow_left"></div>
@@ -15,8 +19,16 @@
     	<div class="shadow_right"></div>
     </div>
     <div class="sub_content">
-    	<div class="property-list wrapper">
-	    	<h2>Derniers Ajouts</h2>
+
+    <?php if(count($announcements)): ?>
+        <ul class="telex">
+        <?php foreach ($announcements as $key => $ann): ?>
+            <li><?php echo $ann ?></li>
+        <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+        <div class="property-list wrapper">
             <?php foreach(PropertyPeer::getLastProperties(sfConfig::get('app_homepage_recently_added_limit', 10)) as $p): ?>
                 <article class="<?php echo $p->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?>
                                 <?php $p->isAvailable() and print('available') ?>">

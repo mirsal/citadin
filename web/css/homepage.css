@@ -169,3 +169,22 @@ div.sub_content
 		margin: 0 auto;
 		overflow: hidden;
 	}
+
+    div.sub_content ul.telex
+    {
+        width: 901px;
+        height: 30px;
+        margin: 0 auto 10px auto;
+        padding: 0 10px;
+        background: #aaa;
+        position: relative;
+        left: -10px;
+        line-height: 30px;
+        overflow: hidden;
+        list-style: none;
+        text-align: center;
+    }
+
+        div.sub_content .telex > li
+        {
+        }
