@@ -19,14 +19,49 @@ div.property-details
 	{
 		overflow: hidden;
 	}
-	
+
+        div.property-details section.gallery > aside
+        {
+            float: left;
+        }
+
+            div.property-details section.gallery a.control
+            {
+                display: block;
+                visibility: hidden;
+                height: 3px;
+                text-indent: -9999px;
+            }
+
+            div.property-details section.gallery a.control.visible
+            {
+                visibility: visible;
+                height: 20px;
+            }
+
+            div.property-details section.gallery a.control.prev
+            {
+                margin: 10px 0 0 32px;
+                background: url('../images/arrow_red_up.png') center no-repeat;
+            }
+
+            div.property-details section.gallery a.control.next
+            {
+                margin: 0 0 0 32px;
+                position: relative;
+                top: -10px;
+                background: #F5F4EF url('../images/arrow_red_down.png') center no-repeat;
+            }
+
 		div.property-details section.gallery ul.thumbnails
 		{
 			width: 100px;
-			height: 300px;
-			float: left;
+			margin: 0 0 0 1.5em;
+			height: 316px;
 			list-style: none;
 			overflow: hidden;
+			overflow-y: auto;
+			margin-bottom: 0;
 		}
 
 			div.property-details section.gallery ul.thumbnails figure
@@ -117,7 +152,7 @@ div.property-details
 			margin: 20px 0 0 120px;
 		}
 	
-	div.property-details aside
+	div.property-details > aside
 	{
 		background: #fff;
 		float: left;
@@ -125,13 +160,13 @@ div.property-details
 		padding: 0 20px;
 	}
 	
-		div.property-details aside details.attributes ul.attribute-group li
+		div.property-details > aside details.attributes ul.attribute-group li
 		{
 			list-style: none;
 			overflow: hidden;
 		}
 	
-			div.property-details aside details.attributes li strong.attribute-name
+			div.property-details > aside details.attributes li strong.attribute-name
 			{
 				color: #666;
 				display: block;
@@ -142,18 +177,18 @@ div.property-details
 				font-weight: normal;
 			}
 			
-			div.property-details aside details.attributes li strong.attribute-name:after
+			div.property-details > aside details.attributes li strong.attribute-name:after
 			{
 				content: " : ";
 			}
 			
-			div.property-details aside details.attributes li span.attribute-value
+			div.property-details > aside details.attributes li span.attribute-value
 			{
 				display: block;
 				float: left;
 			}
 	
-		div.property-details aside details.description
+		div.property-details > aside details.description
 		{
 			background: url(../images/shadow.png) no-repeat;
 		}

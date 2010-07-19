@@ -1,4 +1,7 @@
-<?php use_stylesheet('property_details')?>
+<?php use_stylesheet('property_details.css?v=2010071901')?>
+
+<?php use_javascript('jquery.scrollTo.js')?>
+<?php use_javascript('gallery')?>
 
 <?php slot('head') ?>
 <link rel="canonical" href="<?php echo url_for('property_show', $property) ?>" />
@@ -7,6 +10,8 @@
 <div class="property-details container <?php echo $property->getType() === PropertyPeer::TYPE_RENTAL ? 'rental' : 'sale' ?> <?php $property->isAvailable() and print('available')?>">
 	<div class="left">
 		<section class="gallery">
+			<aside>
+			<a href="#" class="prev control">prev</a>
 			<ul class="thumbnails">
 			<?php foreach($property->getFileAttachments() as $img): ?>
 				<li>
@@ -20,6 +25,8 @@
 				</li>
 			<?php endforeach; ?>
 			</ul>
+			<a href="#" class="next control">next</a>
+			</aside>
 			<figure class="pic">
 				<div class="mask">
 				    <?php $img = isset($image) ? $image : $property->getRandomFileAttachment() ?>
