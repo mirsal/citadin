@@ -170,16 +170,22 @@ div.sub_content
 		overflow: hidden;
 	}
 
-    div.sub_content ul.telex
+    div.sub_content div.telex
     {
         width: 901px;
-        height: 30px;
         margin: 0 auto 10px auto;
-        padding: 0 10px;
-        background: #aaa;
+        overflow: hidden;
         position: relative;
         left: -10px;
         line-height: 30px;
+    }
+
+    div.sub_content ul.telex
+    {
+        height: 30px;
+        width: 1802px;
+        margin: 0;
+        background: #aaa;
         overflow: hidden;
         list-style: none;
         text-align: center;
@@ -187,4 +193,6 @@ div.sub_content
 
         div.sub_content .telex > li
         {
+            float: left;
+            width: 901px;
         }

@@ -1,8 +1,8 @@
-<?php use_stylesheet('homepage') ?>
+<?php use_stylesheet('homepage.css?v=2010072001') ?>
 <?php use_javascript('home-slideshow') ?>
 
 <?php use_javascript('jquery.scrollTo.js') ?>
-<?php use_javascript('home-telex') ?>
+<?php use_javascript('home-telex.js?v=2010072001') ?>
 
 <div class="home-page container">
 	<div class="banner">
@@ -21,11 +21,13 @@
     <div class="sub_content">
 
     <?php if(count($announcements)): ?>
-        <ul class="telex">
-        <?php foreach ($announcements as $key => $ann): ?>
-            <li><?php echo $ann ?></li>
-        <?php endforeach; ?>
-        </ul>
+        <div class="telex">
+            <ul class="telex">
+            <?php foreach ($announcements as $key => $ann): ?>
+                <li><?php echo $ann ?></li>
+            <?php endforeach; ?>
+            </ul>
+        </div>
     <?php endif; ?>
 
         <div class="property-list wrapper">
