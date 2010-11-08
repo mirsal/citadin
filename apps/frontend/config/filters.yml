@@ -3,6 +3,12 @@ security:  ~
 
 # insert your own filters here
 
+google_analytics:
+  class: googleAnalyticsFilter
+  enabled: true
+  param:
+    google_profile_id: "UA-XXXXX-X"
+
 cache:     ~
 common:
   class: sfCommonFilter
